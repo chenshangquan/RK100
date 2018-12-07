@@ -1,0 +1,122 @@
+﻿生成启动时间为 2018/9/21 13:33:14。
+     1>项目“E:\work\svn_root\20180911_RK100\30-rkapp\duilib\DuiLib.vcxproj”在节点 3 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Release\DuiLib.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D UILIB_STATIC /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Release\DuiLib.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O1 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D UILIB_STATIC /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Release\DuiLib.pch" /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Control\UIGif.cpp Control\UILetterIndex.cpp Control\UITouchList.cpp Core\caseManager.cpp DuiDrag\DragController.cpp DuiDrag\DragDataMgr.cpp DuiDrag\DragInterface.cpp DuiDrag\DuiDrag.cpp DuiDrag\UIDragWnd.cpp Layout\UISlideTabLayout.cpp UIlib.cpp Utils\GifImage.cpp Utils\WinImplBase.cpp Utils\UIDelegate.cpp Utils\Utils.cpp Core\UIBase.cpp Core\UIContainer.cpp Core\UIControl.cpp Core\UIDlgBuilder.cpp Core\UIManager.cpp Core\UIMarkup.cpp Core\UIRender.cpp Layout\UIChildLayout.cpp Layout\UIHorizontalLayout.cpp Layout\UITabLayout.cpp Layout\UITileLayout.cpp Layout\UIVerticalLayout.cpp Control\UIActiveX.cpp Control\UIButton.cpp Control\UICheckBox.cpp Control\UICombo.cpp Control\UIComboBox.cpp Control\UIDateTime.cpp Control\UIEdit.cpp Control\UILabel.cpp Control\UIList.cpp Control\UIOption.cpp Control\UIProgress.cpp Control\UIRichEdit.cpp Control\UIScrollBar.cpp Control\UISlider.cpp Control\UIText.cpp Control\UITreeView.cpp Control\UIWebBrowser.cpp
+         UIGif.cpp
+         UILetterIndex.cpp
+         UITouchList.cpp
+         caseManager.cpp
+         DragController.cpp
+         DragDataMgr.cpp
+         DragInterface.cpp
+         DuiDrag.cpp
+         UIDragWnd.cpp
+         UISlideTabLayout.cpp
+         UIlib.cpp
+         GifImage.cpp
+         WinImplBase.cpp
+         UIDelegate.cpp
+         Utils.cpp
+         UIBase.cpp
+     1>Core\UIBase.cpp(530): warning C4800: “BOOL”: 将值强制为布尔值“true”或“false”(性能警告)
+         UIContainer.cpp
+     1>Core\UIContainer.cpp(167): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIContainer.cpp(168): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIContainer.cpp(169): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIContainer.cpp(170): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+         UIControl.cpp
+     1>Core\UIControl.cpp(287): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(288): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(389): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(390): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(406): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(407): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(434): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(435): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(493): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(494): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(495): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(496): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(534): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(535): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(663): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(664): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(665): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(666): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(687): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(688): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(712): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIControl.cpp(749): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+         UIDlgBuilder.cpp
+     1>Core\UIDlgBuilder.cpp(97): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+         UIManager.cpp
+     1>Core\UIManager.cpp(364): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIManager.cpp(365): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIManager.cpp(422): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIManager.cpp(423): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIManager.cpp(445): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIManager.cpp(446): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIManager.cpp(2093): error C2664: “wcscat”: 不能将参数 1 从“TCHAR [260]”转换为“wchar_t *”
+                 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+     1>Core\UIManager.cpp(2098): error C2664: “Gdiplus::Image::Image(const WCHAR *,BOOL)”: 不能将参数 1 从“const char *”转换为“const WCHAR *”
+                 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+         正在生成代码...
+         正在编译...
+         UIMarkup.cpp
+         UIRender.cpp
+     1>Core\UIRender.cpp(1104): warning C4244: “*=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIRender.cpp(1105): warning C4244: “*=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIRender.cpp(1106): warning C4244: “*=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Core\UIRender.cpp(1107): warning C4244: “*=”: 从“float”转换到“LONG”，可能丢失数据
+         UIChildLayout.cpp
+         UIHorizontalLayout.cpp
+         UITabLayout.cpp
+         UITileLayout.cpp
+         UIVerticalLayout.cpp
+         UIActiveX.cpp
+         UIButton.cpp
+         UICheckBox.cpp
+         UICombo.cpp
+     1>Control\UICombo.cpp(139): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>Control\UICombo.cpp(140): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+     1>Control\UICombo.cpp(586): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Control\UICombo.cpp(587): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Control\UICombo.cpp(1094): warning C4244: “=”: 从“float”转换到“int”，可能丢失数据
+         UIComboBox.cpp
+         UIDateTime.cpp
+         UIEdit.cpp
+     1>Control\UIEdit.cpp(175): error C2440: “=”: 无法从“LPTSTR”转换为“LPCWSTR”
+                 与指向的类型无关；转换要求 reinterpret_cast、C 样式转换或函数样式转换
+     1>Control\UIEdit.cpp(179): warning C4018: “>”: 有符号/无符号不匹配
+     1>Control\UIEdit.cpp(181): warning C4018: “<”: 有符号/无符号不匹配
+     1>Control\UIEdit.cpp(193): warning C4018: “<”: 有符号/无符号不匹配
+     1>Control\UIEdit.cpp(199): warning C4018: “>”: 有符号/无符号不匹配
+         UILabel.cpp
+     1>Control\UILabel.cpp(142): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Control\UILabel.cpp(143): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Control\UILabel.cpp(144): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Control\UILabel.cpp(145): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+         UIList.cpp
+         UIOption.cpp
+         UIProgress.cpp
+         UIRichEdit.cpp
+     1>Control\UIRichEdit.cpp(2237): warning C4244: “参数”: 从“WORD”转换到“BYTE”，可能丢失数据
+         UIScrollBar.cpp
+         正在生成代码...
+         正在编译...
+         UISlider.cpp
+     1>Control\UISlider.cpp(53): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+     1>Control\UISlider.cpp(54): warning C4244: “=”: 从“float”转换到“LONG”，可能丢失数据
+         UIText.cpp
+         UITreeView.cpp
+         UIWebBrowser.cpp
+         正在生成代码...
+     1>已完成生成项目“E:\work\svn_root\20180911_RK100\30-rkapp\duilib\DuiLib.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:03.95
