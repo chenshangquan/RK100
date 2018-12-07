@@ -1,0 +1,5 @@
+升级包说明：
+rk100_boot.hex 通过仿真器或者串口升级裸片BOOT程序
+rk100_boot_release.bin 通过网络TFTP升级BOOT程序
+
+rk100.bin 通过RkcTool或者网络TFTP升级的APP程序
