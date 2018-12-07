@@ -22,13 +22,6 @@ VOID  CALLBACK  CTimerOutFun(  HWND   hwnd,   UINT   uMsg, UINT_PTR  idEvent, DW
         CRkcComInterface->CloseSocket();
         WINDOW_MGR_PTR->ShowWindow(g_stcStrToolFrameDlg.c_str(),false);
         CSearchEquipmentLogic::GetSingletonPtr()->GetPaintManagerUI()->DoCase(_T("caseIsnotLogin"));
-
-        //关闭弹窗
-        WINDOW_MGR_PTR->ShowWindow(g_stcStrBackGroundDlg.c_str(), false);  
-        WINDOW_MGR_PTR->CloseWindow(g_stcStrMessageBoxDlg.c_str(),IDCANCEL);  
-
-        //关闭弹窗浏览
-        UIDATAMGR->CloseFileDlg();
     }
 }
 
@@ -395,6 +388,13 @@ bool CSearchEquipmentLogic::OnRkcDisconnected( WPARAM wparam, LPARAM lparam, boo
     u8 byReason = (u8)wparam;
     m_pm->DoCase(_T("caseIsnotLogin"));
     SetTimerOutTimer(false);
+
+    //关闭弹窗
+    WINDOW_MGR_PTR->ShowWindow(g_stcStrBackGroundDlg.c_str(), false);  
+    WINDOW_MGR_PTR->CloseWindow(g_stcStrMessageBoxDlg.c_str(),IDCANCEL);  
+    //关闭弹窗浏览
+    UIDATAMGR->CloseFileDlg();
+
     if (wparam == 1)
     {
         ShowMessageBox(_T("账号已在其他地方登录"),1);
