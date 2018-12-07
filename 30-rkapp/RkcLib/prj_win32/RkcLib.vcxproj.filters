@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\source\kdvdispevent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcsysctrl.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkclib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcmsgdriver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcsession.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcprintctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcmsgrecver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\broadcast.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\datamanager.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\lock.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\MD5.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\mspsearch.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\publicfun.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\stdall.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\mspsearch\threadbase.cpp">
+      <Filter>Source Files\mspsearch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\socketmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcconfigctrl.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcsearchctrl.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\tftp\Tftp.cpp">
+      <Filter>Source Files\tftp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ospmsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkcsysctrl.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkcmsgdriver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkcmsgrecver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\broadcast.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\datamanager.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\devtrackconst.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\lock.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\md5.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\nvrconst.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\publicfun.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\stdall.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\mspsearch\threadbase.h">
+      <Filter>Header Files\mspsearch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkcsearchctrl.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkcsession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\socketmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkcconfigctrl.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\tftp\Tftp.h">
+      <Filter>Header Files\tftp</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{32627b97-747f-4c9e-80a4-a75e5f89afdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6968fc94-b7dc-4688-84ba-c89f4187f47b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\logic">
+      <UniqueIdentifier>{e3595139-9724-461b-9359-1eb468f3a9eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic">
+      <UniqueIdentifier>{9cb507d5-a965-4e5c-8596-ba37fcfac520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{51ac2bd4-8c0d-40a3-96b9-3244157028c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\mspsearch">
+      <UniqueIdentifier>{ad029568-5ce9-45b0-ba6f-37377279ff2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mspsearch">
+      <UniqueIdentifier>{2c0f7b13-f5a8-44b6-aa3e-683b7a02ddce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tftp">
+      <UniqueIdentifier>{30dcad97-0d4f-4869-a934-70ebfd052eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tftp">
+      <UniqueIdentifier>{4a1e81c0-2ab0-4ca5-8dcf-3be3fb216ba2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
