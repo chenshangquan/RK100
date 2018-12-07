@@ -1,0 +1,107 @@
+================= Logging started at 11/21/2018 03:37:34 Calculating size of cabinet files...
+Copying uncompressed setup files...
+Preprocessing data for data1.hdr...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolderSelfReg
+Feature: <Support>\Main Installation
+Feature: <Data>
+Feature: Script
+   Component: <Support>Script
+Feature: Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>English OS Independent Files
+   Component: <Support>Chinese (Simplified) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+   Component: <Support>Misc i64 Support Files
+   Component: <Support>Misc x64 Support Files
+Feature: StrTbl
+   Component: <Support>English String Tables
+   Component: <Support>Chinese (Simplified) String Tables
+Feature: RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: Resource
+   Component: <Support>English Files
+   Component: <Support>Chinese (Simplified) Files
+Feature: Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(3)
+   Component: <Disk1>Disk1 Files(4)
+Feature: DefaultFeature
+   Component: AEC
+   Component: DefaultComponent
+   Component: Files
+   Component: Files1
+   Component: Files2
+   Component: Files3
+   Component: Files4
+   Component: Files5
+   Component: Files6
+   Component: Files7
+   Component: NewComponent1
+   Component: SelfRegFiles
+   Component: SelfRegFiles1
+   Component: WINSYSDIRSharedFiles
+   Component: mpeg win32 Files
+Processing registries...
+Building cabinet file data1.hdr...
+Building cabinet file data1.cab...
+Feature: <Support>
+Feature: <Support>\Engine
+Feature: <Support>\Engine\Log
+Feature: <Support>\Engine\Kernel
+   Component: <Engine>Kernel Placeholder
+   Component: <Engine>EngineCommonPlaceHolderSelfReg
+Feature: <Support>\Main Installation
+Feature: <Support>\Main Installation\Script
+   Component: <Support>Script
+Feature: <Support>\Main Installation\Setup
+   Component: <Support>Language Independent OS Independent Files
+   Component: <Support>English OS Independent Files
+   Component: <Support>Chinese (Simplified) OS Independent Files
+   Component: <Support>Misc Support Files
+   Component: <Support>Build Generated Support Files
+   Component: <Support>Misc i64 Support Files
+   Component: <Support>Misc x64 Support Files
+Feature: <Support>\Main Installation\StrTbl
+   Component: <Support>English String Tables
+   Component: <Support>Chinese (Simplified) String Tables
+Feature: <Support>\Main Installation\RunTime
+   Component: <Support>Non-SelfRegistering
+Feature: <Support>\Main Installation\Resource
+   Component: <Support>English Files
+   Component: <Support>Chinese (Simplified) Files
+Feature: <Data>
+Building cabinet file data2.cab...
+Feature: <Data>\Disk<1>
+   Component: <Disk1>Disk1 Files(1)
+   Component: <Disk1>Disk1 Files(2)
+   Component: <Disk1>Disk1 Files(3)
+   Component: <Disk1>Disk1 Files(4)
+Feature: <Data>\DefaultFeature
+   Component: AEC
+   Component: DefaultComponent
+   Component: Files
+   Component: Files1
+   Component: Files2
+   Component: Files3
+   Component: Files4
+   Component: Files5
+   Component: Files6
+   Component: Files7
+   Component: NewComponent1
+   Component: SelfRegFiles
+   Component: SelfRegFiles1
+   Component: WINSYSDIRSharedFiles
+   Component: mpeg win32 Files
+Creating disk layout file 'layout.bin'...
+Creating self-extracting exe...
+Build finished at 11/21/18 15:37:35.
+Automatic update notification disabled
+SINGLE_EXE_IMAGE - 0 error(s), 0 warning(s)
+================= Logging stopped at 11/21/2018 03:37:35 Log file has been created: <file:F:\root\20180911_RK100\30-rkapp\RkcTool\setup\RkcTool\Media\SINGLE_EXE_IMAGE\Log Files\11-21-2018 03-37-34 

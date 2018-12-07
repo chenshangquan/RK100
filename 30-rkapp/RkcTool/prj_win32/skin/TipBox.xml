@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="260,68" roundcorner="1,0" >
+<Font name="微软雅黑" size="12" bold="false" />
+	<VerticalLayout name="TipBoxLayout" bkcolor="#FF434343">
+		<Label name="LabelTip" float="true" pos="0,0,0,0" width="260" height="68" text="确认此操作？" textcolor="#ffffffff" align="center" font="0" gdiplus="true"/>
+	</VerticalLayout>
+</Window>

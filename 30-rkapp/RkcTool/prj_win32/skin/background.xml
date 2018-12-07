@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1100,720" roundcorner="1,0" bktrans="true" >
+	<VerticalLayout name="BackGroundLayout" bkcolor="#4d000000">
+	</VerticalLayout>
+</Window>

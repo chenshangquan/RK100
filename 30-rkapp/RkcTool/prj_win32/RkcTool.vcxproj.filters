@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\searchequipmentlogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcinterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rkctool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkctoolcommonop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rkctoolDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkctoolmsgmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcsearchif.cpp">
+      <Filter>Source Files\interface_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcsysctrlif.cpp">
+      <Filter>Source Files\interface_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\loginlogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\toolframelogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\networksetuplogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\radiosetuplogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\workingmodelogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\backupupgradelogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\UIDataMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\messageboxlogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\tipboxlogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\rkcconfigctrlif.cpp">
+      <Filter>Source Files\interface_cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\modifypasswordlogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\debugmodelogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\setmenulogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\netchangelogic.cpp">
+      <Filter>Source Files\logic</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\constdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\globalheader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\searchequipmentlogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkcinterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rkctool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkctoolcommonop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rkctoolDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\rkctoolmsgmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\loginlogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\toolframelogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\networksetuplogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\radiosetuplogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\workingmodelogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\backupupgradelogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\UIDataMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\messageboxlogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\tipboxlogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\modifypasswordlogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\debugmodelogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\setmenulogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\netchangelogic.h">
+      <Filter>Header Files\logic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{710dca8f-48cd-4a56-8f8d-fe8e8b646800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{7b8228c7-593f-49cb-8cf1-77e522458a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{791d63b0-e02a-427b-8eb9-b1d97b4f69ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\logic">
+      <UniqueIdentifier>{2b26f955-5637-4106-8d84-15f66eaf30c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\logic">
+      <UniqueIdentifier>{37eac4a8-a93a-415a-a394-fd4ebf23269c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\interface_cpp">
+      <UniqueIdentifier>{071a94e1-78e6-42d0-8914-04628485bd27}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\rkctool.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RkcTool.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<index>
+<!--index下配置窗口索引 file-窗口对应xml文件   logic-窗口逻辑类名  parent-父窗口名  style(frame|dialog|child)风格,默认frame-->
+  <rkctool file="SearchEquipment.xml" logic="CSearchEquipmentLogic" style="frame" />
+  <rkclogin file="login.xml" logic="CLoginLogic" style="dialog" parent="rkctool"/>
+  <rkcmessagebox file="MessageBox.xml" logic="CMessageBoxLogic" style="dialog" parent="rkctool"/>
+  <rkctipbox file="TipBox.xml" logic="CTipBoxLogic" style="child" parent="rkctool"/>
+  <rkcSetMenu file="SetMenu.xml" logic="CSetMenuLogic" style="dialog" parent="rkctool"/>
+  <rkcbackground file="background.xml" logic="" style="dialog" parent="rkctool"/>
+  <rktoolframer file="ToolFrame.xml" logic="CToolFrameLogic|CNetworkSetupLogic|CRadioSetupLogic|CWorkingModeLogic|CBackupUpgradeLogic|CDebugModeLogic|CModifyPasswordLogic" style="child" parent="rkctool"/>
+  <NetChange file="NetChange.xml" logic="CNetChangeLogic" parent="rkctool" style="dialog" /> 
+  <PasswordHelp file="Passwordhelp.xml" logic="" style="dialog" parent="rkctool"/> 
+</index>

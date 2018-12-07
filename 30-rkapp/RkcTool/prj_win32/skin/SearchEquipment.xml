@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1100,720" maxinfo="1100,720" roundcorner="1,1" caption="0,0,0,80" showshadow="true" shadowposition="1,1" shadowdarkness="155" shadowsize="7">
+<Font name="微软雅黑" size="16" bold="false" />
+<Font name="微软雅黑" size="13" bold="false" />
+<Font name="微软雅黑" size="12" bold="false" />
+<Font name="微软雅黑" size="14" bold="true" />
+<Font name="宋体" size="12" bold="false" />
+<Default name="VScrollBar" value="width=&quot;7&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; thumbnormalimage=&quot;res/public/scroll/world_Drop-bar.png&quot; "/>
+	<VerticalLayout name="SearchEquipment" bkcolor="#FFFFFFFF" >
+		<HorizontalLayout height="98" >
+			<Label float="true" pos="39,25,0,0" width="116" height="60" bkimage="res/logo/logo.png" gdiplus="false" />
+			<Label float="true" pos="163,48,0,0" width="10" height="15" bkimage="res/logo/Slash.png" gdiplus="false" />
+			<Label float="true" pos="183,45,0,0" width="60" height="17" text="RKC-T" textcolor="#FF242424" font="0" align="left" gdiplus="false" />
+			<Label float="true" pos="250,45,0,0" width="220" height="17" text="智能中控主机调试工具" textcolor="#FF242424" font="1" align="left" gdiplus="false" />
+			
+			<Label name="HeadPortraitLab" float="true" pos="909,48,0,0" width="24" height="24" bkimage="res/logo/HeadPortrait.png" gdiplus="false" visible="false"/>
+			<Label name="nameLab" float="true" pos="938,50,0,0" width="80" height="20" text="未知用户" textcolor="#FF242424" font="2" align="left" gdiplus="false" visible="false"/>
+			<Button name="setbtn" float="true" pos="1011,48,0,0" width="24" height="24" normalimage="res/public/button/set_normal.png" hotimage="res/public/button/set_hover.png" visible="false"/>
+			<Button name="exitbtn" float="true" pos="1039,48,0,0" width="24" height="24" normalimage="res/public/button/exit_normal.png" hotimage="res/public/button/exit_hover.png" visible="false"/>
+			
+			<Button name="minbtn" float="true" pos="1051,9,0,0" width="12" height="12" normalimage="res/public/button/min_normal.png" hotimage="res/public/button/min_hover.png"/>
+			<Button name="closebtn" float="true" pos="1079,9,0,0" width="12" height="12" normalimage="res/public/button/close_normal.png" hotimage="res/public/button/close_hover.png"/>
+		</HorizontalLayout>
+		<HorizontalLayout height="2" >
+			<Label float="true" pos="39,0,0,0" width="110" height="2" bkcolor="#FF949799" gdiplus="false" />
+			<Label float="true" pos="221,0,0,0" width="840" height="2" bkcolor="#FF949799" gdiplus="false" />
+		</HorizontalLayout>
+		<HorizontalLayout >
+			<VerticalLayout width="149">
+				<Label float="true" pos="74,20,0,0" width="75" height="20" text="设备检索" textcolor="#FFFFFFFF" font="3" bkimage="res/tab/LeftNavigation.png" align="center" gdiplus="false" />
+			</VerticalLayout>
+			<VerticalLayout width="72"/>
+			<VerticalLayout>
+				<Option name="OptSearchTypeALL" float="true" pos="0,20,0,0" width="18" height="18" group="searchtype" normalimage="res/public/button/radiobtn_normal.png" selectedimage="res/public/button/radiobtn_selected.png" selected="true"/>
+				<Label float="true" pos="20,22,0,0" width="80" height="18" text="全局IP检索" textcolor="#FF4E4E4E" font="4" align="left" gdiplus="false" />
+				<Option name="OptSearchTypeIP" float="true" pos="120,20,0,0" width="18" height="18" group="searchtype" normalimage="res/public/button/radiobtn_normal.png" selectedimage="res/public/button/radiobtn_selected.png"  />
+				<Label float="true" pos="140,22,0,0" width="80" height="18" text="IP区间检索" textcolor="#FF4E4E4E" font="4" align="left" gdiplus="false" />
+				<Edit name="EdtStartIP" float="true" pos="220,20,0,0" width="110" height="18" text="" textcolor="#FF4E4E4E" font="4" align="left" maxchar="16" gdiplus="false" numberstyle="1"/>
+				<Label float="true" pos="220,38,0,0" width="110" height="1" bkcolor="#FF8b8b8b" gdiplus="false" />
+				<Label float="true" pos="330,20,0,0" width="20" height="18" text="~" textcolor="#FF4E4E4E" font="3" align="center" gdiplus="false" />
+				<Edit name="EdtEndIP" float="true" pos="350,20,0,0" width="110" height="18" text="" textcolor="#FF4E4E4E" font="4" align="left" maxchar="16" gdiplus="false" numberstyle="1"/>
+				<Label float="true" pos="350,38,0,0" width="110" height="1" bkcolor="#FF8b8b8b" gdiplus="false" />				
+				<Button name="SearchBtn" float="true" pos="730,18,0,0" width="50" height="22" text="搜索" font="2" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+				<Button name="ResetBtn" float="true" pos="790,18,0,0" width="50" height="22" text="重置" font="2" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+				
+				<Label float="true" pos="0,56,0,0" width="840" height="1" bkcolor="#FF8b8b8b" gdiplus="false" />
+				<List name="EquipmentList" float="true" pos="0,58,0,0" width="840" height="500" vscrollbar="true">
+				<ListHeader height="20" >
+					<ListHeaderItem text="序号" width="47" align="left" font="2" textcolor="#FF8b8b8b" textpadding="5,0,0,0" dragable="false"/>
+					<ListHeaderItem text="| 设备型号" width="142" align="left" font="2" textcolor="#FF8b8b8b" textpadding="0,0,0,0" dragable="false"/>
+					<ListHeaderItem text="| 设备IP" width="186" align="left" font="2" textcolor="#FF8b8b8b" textpadding="0,0,0,0" dragable="false"/>
+					<ListHeaderItem text="| 设备SN" width="205" align="left" font="2" textcolor="#FF8b8b8b" textpadding="0,0,0,0" dragable="false"/>
+					<ListHeaderItem text="| 软件版本" width="141" align="left" font="2" textcolor="#FF8b8b8b" textpadding="0,0,0,0" dragable="false"/>
+					<ListHeaderItem text="| 操作" width="119" align="left" font="2" textcolor="#FF8b8b8b" textpadding="0,0,0,0" dragable="false"/>
+				</ListHeader>
+				</List>
+			
+			</VerticalLayout>
+		</HorizontalLayout>
+		<HorizontalLayout height="47" >
+			<Label float="true" pos="221,0,0,0" width="840" height="2" bkcolor="#FF949799" gdiplus="false" />
+			<Label float="true" pos="221,17,0,0" width="840" height="15" text="Copyright ©1995-2018 苏州科达科技股份有限公司.All Rights Reserved." textcolor="#FF606060" font="2" align="center" gdiplus="false" />
+		</HorizontalLayout>
+		
+		<Case name="caseIsLogin">	<!--已登录-->
+			<HeadPortraitLab visible="true"/>
+			<nameLab visible="true"/>
+			<setbtn visible="true"/>
+			<exitbtn visible="true"/>
+		</Case>
+		<Case name="caseIsnotLogin">	<!--未登录-->
+			<HeadPortraitLab visible="false"/>
+			<nameLab visible="false"/>
+			<setbtn visible="false"/>
+			<exitbtn visible="false"/>
+			<PasswardEdt text=""/>
+		</Case>
+		
+		<Case name="caseIsSearchAll">
+			<EdtStartIP enabled="false"/>
+			<EdtEndIP enabled="false"/>
+		</Case>
+		<Case name="caseIsSearchIP">
+			<EdtStartIP enabled="true"/>
+			<EdtEndIP enabled="true"/>
+		</Case>
+		
+	</VerticalLayout>
+</Window>

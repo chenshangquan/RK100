@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window sizebox="0,0,0,0" caption="0,0,0,0" size="266,250" mininfo="266,250" maxinfo="266,250" bktrans="false">
+	<Font name="微软雅黑" size="12" bold="false" />
+    <VerticalLayout name="NetDetailLayout" bkimage="res/bg.png" bordersize="1" bordercolor="fe666666">
+		<Label float="true" pos="20,19,0,0" width="80" height="21" text="原网络信息" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label float="true" pos="20,45,0,0" width="80" height="21" text="IP地址" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label name="IPOldLab" float="true" pos="110,45,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label float="true" pos="20,70,0,0" width="80" height="21" text="子网掩码" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label name="SubOldLab" float="true" pos="110,75,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label float="true" pos="20,100,0,0" width="80" height="21" text="网关" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label name="GateOldLab" float="true" pos="110,105,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		
+		<Label float="true" pos="20,139,0,0" width="80" height="21" text="现网络信息" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label float="true" pos="20,165,0,0" width="80" height="21" text="IP地址" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label name="IPNewLab" float="true" pos="110,165,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label float="true" pos="20,190,0,0" width="80" height="21" text="子网掩码" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label name="SubNewLab" float="true" pos="110,190,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label float="true" pos="20,220,0,0" width="80" height="21" text="网关" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		<Label name="GateNewLab" float="true" pos="110,220,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+	</VerticalLayout>
+</Window>

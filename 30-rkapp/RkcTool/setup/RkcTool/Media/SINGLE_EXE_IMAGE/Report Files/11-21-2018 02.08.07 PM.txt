@@ -1,0 +1,464 @@
+//////////////////////////////////////////////////////////////////////
+/////////////////////////////// Summary //////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+		Features:  			        13
+		Components:			        36
+		Number of Files:		        51
+		Size of Files:   		      12551776
+		Size in Library:		       7663568
+
+
+		<Support>
+			Engine
+				Log
+				Kernel
+			Main Installation
+				Script
+				Setup
+				StrTbl
+				RunTime
+				Resource
+		<Data>
+			Disk<1>
+			DefaultFeature
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Features ///////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+*<Support>*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Log*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Engine\Kernel*
+
+		Component
+		------------------------------------------------------
+		"<Engine>Kernel Placeholder"
+		"<Engine>EngineCommonPlaceHolderSelfReg"
+
+*<Support>\Main Installation*
+
+		Component
+		------------------------------------------------------
+
+*<Support>\Main Installation\Script*
+
+		Component
+		------------------------------------------------------
+		"<Support>Script"
+
+*<Support>\Main Installation\Setup*
+
+		Component
+		------------------------------------------------------
+		"<Support>Language Independent OS Independent Files"
+		"<Support>English OS Independent Files"
+		"<Support>Chinese (Simplified) OS Independent Files"
+		"<Support>Misc Support Files"
+		"<Support>Build Generated Support Files"
+		"<Support>Misc i64 Support Files"
+		"<Support>Misc x64 Support Files"
+
+*<Support>\Main Installation\StrTbl*
+
+		Component
+		------------------------------------------------------
+		"<Support>English String Tables"
+		"<Support>Chinese (Simplified) String Tables"
+
+*<Support>\Main Installation\RunTime*
+
+		Component
+		------------------------------------------------------
+		"<Support>Non-SelfRegistering"
+
+*<Support>\Main Installation\Resource*
+
+		Component
+		------------------------------------------------------
+		"<Support>English Files"
+		"<Support>Chinese (Simplified) Files"
+
+*<Data>*
+
+		Component
+		------------------------------------------------------
+
+*<Data>\Disk<1>*
+
+		Component
+		------------------------------------------------------
+		"<Disk1>Disk1 Files(1)"
+		"<Disk1>Disk1 Files(2)"
+		"<Disk1>Disk1 Files(3)"
+		"<Disk1>Disk1 Files(4)"
+
+*<Data>\DefaultFeature*
+
+		Component
+		------------------------------------------------------
+		"AEC"
+		"DefaultComponent"
+		"Files"
+		"Files1"
+		"Files2"
+		"Files3"
+		"Files4"
+		"Files5"
+		"Files6"
+		"Files7"
+		"Files8"
+		"Files9"
+		"NewComponent1"
+		"SelfRegFiles"
+		"SelfRegFiles1"
+		"WINSYSDIRSharedFiles"
+		"mpeg win32 Files"
+
+
+//////////////////////////////////////////////////////////////////////
+///////////////////////////// Components ////////////////////////////
+//////////////////////////////////////////////////////////////////////
+
+><Engine>Kernel Placeholder<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+><Engine>EngineCommonPlaceHolderSelfReg<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+><Support>Script<
+
+		Size of Files:   		        208658
+		Size in Library:		        208658
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.inx"                                             2018/11/21     14:08:06       208658  ""                 "A"           "9236c9cdce0a6b62d2a397b4be01cd21"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\script files\setup.inx"
+
+><Support>Language Independent OS Independent Files<
+
+		Size of Files:   		         11493
+		Size in Library:		          2605
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"license.rtf"                                           2006/05/16     11:57:38        11493  ""                 "A"           "e7eb45e877c8cb80f56e9dbc9504e757"      "c:\program files (x86)\macrovision\is12\redist\0409\license.rtf"
+
+><Support>English OS Independent Files<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+><Support>Chinese (Simplified) OS Independent Files<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+><Support>Misc Support Files<
+
+		Size of Files:   		         76175
+		Size in Library:		         18010
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"corecomp.ini"                                          2006/05/16     11:58:14        65503  ""                 "A"           "09d38ceca6a012f4ce5b54f03db9b21a"      "c:\program files (x86)\macrovision\is12\redist\language independent\i386\corecomp.ini"
+		"dotnetinstaller.exe"                                   2006/05/17     11:21:16        10672  "12.0.0.49974"     "A"           "dcb85ac1c2214f8865c0814c8c445b31"      "c:\program files (x86)\macrovision\is12\redist\language independent\i386\dotnetinstaller.exe"
+
+><Support>Build Generated Support Files<
+
+		Size of Files:   		            39
+		Size in Library:		            43
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"fontdata.ini"                                          2018/11/21     14:08:06           39  ""                 "A"           "00f313e3e007599349a0c4d81c7807c4"      "c:\users\csquan\appdata\local\temp\fontdata.ini"
+
+><Support>Misc i64 Support Files<
+
+		Size of Files:   		        134576
+		Size in Library:		         57513
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isbew64.exe"                                           2006/05/17     11:21:38       134576  "12.0.0.49974"     "A"           "ffde159324c39b025630c3438c53c8bd"      "c:\program files (x86)\macrovision\is12\redist\language independent\i64\isbew64.exe"
+
+><Support>Misc x64 Support Files<
+
+		Size of Files:   		         70064
+		Size in Library:		         33915
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isbew64.exe"                                           2006/05/17     11:21:40        70064  "12.0.0.49974"     "A"           "4b56c021299344676f123fcb48f53c1e"      "c:\program files (x86)\macrovision\is12\redist\language independent\x64\isbew64.exe"
+
+><Support>English String Tables<
+
+		Size of Files:   		          3014
+		Size in Library:		           889
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"stringtable-0009-english.ips"                          2018/11/21     14:08:06         3014  ""                 "A"           "399904069460b41a81f45c2d8cc9f56f"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\string tables\stringtable-0009-english.ips"
+
+><Support>Chinese (Simplified) String Tables<
+
+		Size of Files:   		          2888
+		Size in Library:		           974
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"stringtable-0804-chinese (simplified).ips"             2018/11/21     14:08:06         2888  ""                 "A"           "56c85466058d1e339aec3af5c2163dd3"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\string tables\stringtable-0804-chinese (simplified).ips"
+
+><Support>Non-SelfRegistering<
+
+		Size of Files:   		        209472
+		Size in Library:		        199883
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"isrt.dll"                                              2006/05/17     11:21:20       208304  "12.0.0.49974"     "A"           "b35dde51d14f9400e73196693148734e"      "c:\program files (x86)\macrovision\is12\redist\language independent\i386\isrt.dll"
+		"default.pal"                                           2006/05/16     11:58:14         1168  ""                 "A"           "0abafe3f69d053494405061de2629c82"      "c:\program files (x86)\macrovision\is12\redist\language independent\i386\default.pal"
+
+><Support>English Files<
+
+		Size of Files:   		        102832
+		Size in Library:		         91415
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isres.dll"                                            2006/05/17     11:19:30       102832  "12.0.0.49974"     "A"           "d94ce5eb6681d17a95dd88e3e7569d6e"      "c:\program files (x86)\macrovision\is12\redist\0409\i386\skins\_isres.dll"
+
+><Support>Chinese (Simplified) Files<
+
+		Size of Files:   		         95232
+		Size in Library:		         85573
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"_isres.dll"                                            2006/05/16     14:08:40        95232  "12.0.0.49974"     "A"           "98d1bf78dafafc3c55181bde48281ea0"      "c:\program files (x86)\macrovision\is12\redist\0804\i386\skins\_isres.dll"
+
+><Disk1>Disk1 Files(1)<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"layout.bin"                                            2006/05/16     12:02:16            0  ""                 "A"           "d41d8cd98f00b204e9800998ecf8427e"      "c:\program files (x86)\macrovision\is12\support\build\layout.bin"
+		"data1.hdr"                                             2006/05/16     12:02:16            0  ""                 "A"           "d41d8cd98f00b204e9800998ecf8427e"      "c:\program files (x86)\macrovision\is12\support\build\data1.hdr"
+		"data1.cab"                                             2006/05/16     12:02:16            0  ""                 "A"           "d41d8cd98f00b204e9800998ecf8427e"      "c:\program files (x86)\macrovision\is12\support\build\data1.cab"
+
+><Disk1>Disk1 Files(2)<
+
+		Size of Files:   		       1412598
+		Size in Library:		       1412598
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.exe"                                             2006/05/24     12:10:42       455600  "12.0.0.49974"     "A"           "fbab280d0cac5e21c72f0a1a7b5b9608"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\media\single_exe_image\disk images\disk1\setup.exe"
+		"setup.isn"                                             2006/05/16     14:44:50        31104  ""                 "A"           "c534b9627437aad9c5d094a0e323c1ed"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\media\single_exe_image\disk images\disk1\setup.isn"
+		"_setup.dll"                                            2006/05/17     11:21:08       373680  "12.0.0.49974"     "A"           "9be3415fe7729ce5d0c35ef032897039"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\media\single_exe_image\disk images\disk1\_setup.dll"
+		"issetup.dll"                                           2018/11/21     14:08:06       552214  "12.0.0.49974"     "A"           "708814a62ba813cea1a94bb77d68195b"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\media\single_exe_image\disk images\disk1\issetup.dll"
+
+><Disk1>Disk1 Files(3)<
+
+		Size of Files:   		        208658
+		Size in Library:		        208658
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.inx"                                             2018/11/21     14:08:06       208658  ""                 "A"           "9236c9cdce0a6b62d2a397b4be01cd21"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\script files\setup.inx"
+
+><Disk1>Disk1 Files(4)<
+
+		Size of Files:   		           533
+		Size in Library:		           533
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"setup.ini"                                             2018/11/21     14:08:06          533  ""                 "A"           "d5fb859957939442f8f5ab0e831de8d0"      "f:\root\20180911_rk100\30-rkapp\rkctool\setup\rkctool\media\single_exe_image\disk images\disk1\setup.ini"
+
+>AEC<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>DefaultComponent<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files1<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files2<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files3<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files4<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files5<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files6<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files7<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files8<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>Files9<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>NewComponent1<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>SelfRegFiles<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>SelfRegFiles1<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+
+>WINSYSDIRSharedFiles<
+
+		Size of Files:   		      10015544
+		Size in Library:		       5342301
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------
+		"msvcp100.dll"                                          2011/06/11     01:58:52       421200  "10.0.40219.325"   "A"           "bc83108b18756547013ed443b8cdb31b"      "c:\windows\system32\msvcp100.dll"
+		"msvcr100.dll"                                          2011/06/11     01:58:52       773968  "10.0.40219.325"   "A"           "0e37fbfa79d349d672456923ec5fbbe3"      "c:\windows\system32\msvcr100.dll"
+		"mfc100.dll"                                            2011/06/11     01:58:52      4397384  "10.0.40219.325"   "A"           "493fc0f59054a6f4f3775655fb55295c"      "c:\windows\system32\mfc100.dll"
+		"mfc100u.dll"                                           2011/06/11     01:58:52      4422992  "10.0.40219.325"   "A"           "f3de10aabd5c7a1a186c9966f037d0c0"      "c:\windows\system32\mfc100u.dll"
+
+>mpeg win32 Files<
+
+		Size of Files:   		             0
+
+
+		File                                                    Date        Time         Size         Version            Attributes    MD5                                     Source file
+		------------------------------------------------------  ----------  -----------  -----------  -----------------  ------------  --------------------------------------  ------------------------------------------------

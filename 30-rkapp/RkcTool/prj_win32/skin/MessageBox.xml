@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1100,720" roundcorner="1,0" bktrans="true" >
+<Font name="微软雅黑" size="12" bold="false" />
+	<VerticalLayout name="MessageBoxLayout" >
+		<Control name="TopSpaceLayout" bkcolor="#00000000"/>
+		<HorizontalLayout height="260">
+			<Control name="LeftSpaceLayout" bkcolor="#00000000"/>
+			<TabLayout name="MessageBoxTab" width="400" bkimage="res/bg.png">
+				<!--MessageBox-->
+				<VerticalLayout name="MessageLayout" >
+					<VerticalLayout height="40">
+						<Label float="true" pos="16,14,0,0" width="220" height="15" text="提示" textcolor="#ff4e4e4e" font="0" align="left" gdiplus="true" />
+						<Button name="MsgBoxclosebtn" float="true" pos="366,9,0,0" width="23" height="23" normalimage="res/public/button/closenormal.png" hotimage="res/public/button/closehover.png"/>
+					</VerticalLayout>
+					<VerticalLayout height="1">
+						<Label float="true" pos="16,0,0,0" width="368" height="1" bkcolor="#feececec" gdiplus="true" />
+					</VerticalLayout>
+					<VerticalLayout>
+						<VerticalLayout height="166">
+							<Label float="true" pos="50,75,0,0" width="21" height="21" bkimage="res/logo/tip.png" gdiplus="true" />
+							<Label name="LabelTip" float="true" pos="80,65,0,0" width="240" height="42" text="确认此操作？" textcolor="#ff4e4e4e" align="center" font="0" gdiplus="true"/>
+						</VerticalLayout>
+						<HorizontalLayout height="23">
+							<Control />
+							<Button name="MsgBoxOkBtn" width="68" height="23" text="确定" font="0" textcolor="ff5f5f5f" hottextcolor="ff007ac0" pushedtextcolor="ff5f5f5f" bkcolor="feeff2f4" pushedbkcolor="feffffff" bordersize="1" bordercolor="ffdcdfe1" gdiplus="true"/>
+							<Control width="6"/>
+							<Button name="MsgBoxCancelBtn" width="68" height="23" text="取消" font="0" textcolor="ff5f5f5f" hottextcolor="ff007ac0" pushedtextcolor="ff5f5f5f" bkcolor="feeff2f4" pushedbkcolor="feffffff" bordersize="1" bordercolor="ffdcdfe1" gdiplus="true"/>
+							<Control />
+						</HorizontalLayout>
+					</VerticalLayout>
+				</VerticalLayout>
+				<!--BackUpsBox-->
+				<VerticalLayout name="BackUpsBoxLayout" visible="false">
+					<VerticalLayout height="40">
+						<Label float="true" pos="16,14,0,0" width="220" height="15" text="备份导入" textcolor="#ff4e4e4e" font="0" align="left" gdiplus="true" />
+						<Button name="closebtn" float="true" pos="366,9,0,0" width="23" height="23" normalimage="res/public/button/closenormal.png" hotimage="res/public/button/closehover.png"/>
+					</VerticalLayout>
+					<VerticalLayout height="1">
+						<Label float="true" pos="16,0,0,0" width="368" height="1" bkcolor="#feececec" gdiplus="true" />
+					</VerticalLayout>
+					<VerticalLayout >
+						<VerticalLayout height="166" name="BackUpsLayout" >
+							<Label float="true" pos="90,50,0,0" width="80" height="21" text="设备型号：" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label name="LabelModel" float="true" pos="150,50,0,0" width="170" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label float="true" pos="90,80,0,0" width="80" height="42" text="文件时间：" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label name="LabelTime" float="true" pos="150,80,0,0" width="170" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label name="NetChangeLab" float="true" pos="90,110,0,0" width="80" height="42" text="网络设置变更" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Button name="NetChangeBtn" float="true" pos="170,108,0,0" width="80" height="21" text="查看详情" textcolor="#ff007ac0" align="center" font="0" gdiplus="true"/>
+						</VerticalLayout>
+						<HorizontalLayout height="23">
+							<Control />
+							<Button name="OkBtn" width="68" height="23" text="确定导入" font="0" textcolor="ff5f5f5f" hottextcolor="ff007ac0" pushedtextcolor="ff5f5f5f" bkcolor="feeff2f4" pushedbkcolor="feffffff" gdiplus="true"/>
+							<Control width="6"/>
+							<Button name="CancelBtn" width="68" height="23" text="取消" font="0" textcolor="ff5f5f5f" hottextcolor="ff007ac0" pushedtextcolor="ff5f5f5f" bkcolor="feeff2f4" pushedbkcolor="feffffff" gdiplus="true"/>
+							<Control />
+						</HorizontalLayout>
+					</VerticalLayout>
+				</VerticalLayout>
+				<!--UpDate-->
+				<VerticalLayout name="BackUpsBoxLayout" visible="false">
+					<VerticalLayout height="40">
+						<Label float="true" pos="16,14,0,0" width="220" height="15" text="设备升级" textcolor="#ff4e4e4e" font="0" align="left" gdiplus="true" />
+						<Button name="closebtn" float="true" pos="366,9,0,0" width="23" height="23" normalimage="res/public/button/closenormal.png" hotimage="res/public/button/closehover.png"/>
+					</VerticalLayout>
+					<VerticalLayout height="1">
+						<Label float="true" pos="16,0,0,0" width="368" height="1" bkcolor="#feececec" gdiplus="true" />
+					</VerticalLayout>
+					<VerticalLayout>
+						<VerticalLayout height="166">
+							<Label float="true" pos="90,35,0,0" width="80" height="21" text="设备型号：" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label name="LabelUPModel" float="true" pos="170,35,0,0" width="170" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label float="true" pos="90,65,0,0" width="80" height="42" text="原软件版本：" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label name="LabelUPVer" float="true" pos="170,65,0,0" width="170" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label float="true" pos="90,95,0,0" width="80" height="42" text="新软件版本：" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+							<Label name="LabelUPVerNew" float="true" pos="170,95,0,0" width="170" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+						</VerticalLayout>
+						<HorizontalLayout height="23">
+							<Control />
+							<Button name="OkBtn" width="68" height="23" text="确定升级" font="0" textcolor="ff5f5f5f" hottextcolor="ff007ac0" pushedtextcolor="ff5f5f5f" bkcolor="feeff2f4" pushedbkcolor="feffffff" bordersize="1" bordercolor="ffdcdfe1" gdiplus="true"/>
+							<Control width="6"/>
+							<Button name="CancelBtn" width="68" height="23" text="取消" font="0" textcolor="ff5f5f5f" hottextcolor="ff007ac0" pushedtextcolor="ff5f5f5f" bkcolor="feeff2f4" pushedbkcolor="feffffff" bordersize="1" bordercolor="ffdcdfe1" gdiplus="true"/>
+							<Control />
+						</HorizontalLayout>
+					</VerticalLayout>
+				</VerticalLayout>
+			</TabLayout>
+			<Control name="RigntSpaceLayout" bkcolor="#00000000"/>
+		</HorizontalLayout>
+		<Control name="BottomSpaceLayout" bkcolor="#00000000"/>
+		
+		<VerticalLayout name="NetDetailLayout" bkimage="res/bg.png" float="true" pos="560,400" width="266" height="250" bordersize="1" bordercolor="fe666666" bkcolor="#feffffff" visible="false">
+			<Label float="true" pos="0,0,0,0" width="266" height="1" bkcolor="#fe666666" gdiplus="true" />
+			<Label float="true" pos="0,249,0,0" width="266" height="1" bkcolor="#fe666666" gdiplus="true" />
+			<Label float="true" pos="0,0,0,0" width="1" height="250" bkcolor="#fe666666" gdiplus="true" />
+			<Label float="true" pos="265,0,0,0" width="1" height="250" bkcolor="#fe666666" gdiplus="true" />
+			
+			<Label float="true" pos="20,19,0,0" width="80" height="21" text="原网络信息" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label float="true" pos="20,45,0,0" width="80" height="21" text="IP地址" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label name="IPOldLab" float="true" pos="110,45,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label float="true" pos="20,70,0,0" width="80" height="21" text="子网掩码" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label name="SubOldLab" float="true" pos="110,75,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label float="true" pos="20,100,0,0" width="80" height="21" text="网关" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label name="GateOldLab" float="true" pos="110,105,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			
+			<Label float="true" pos="20,139,0,0" width="80" height="21" text="现网络信息" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label float="true" pos="20,165,0,0" width="80" height="21" text="IP地址" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label name="IPNewLab" float="true" pos="110,165,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label float="true" pos="20,190,0,0" width="80" height="21" text="子网掩码" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label name="SubNewLab" float="true" pos="110,190,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label float="true" pos="20,220,0,0" width="80" height="21" text="网关" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+			<Label name="GateNewLab" float="true" pos="110,220,0,0" width="160" height="21" text="" textcolor="#ff4e4e4e" align="left" font="0" gdiplus="true"/>
+		</VerticalLayout>
+		
+		<Case name="caseTypeNoBtn">
+			<MsgBoxOkBtn visible="false"/>
+			<MsgBoxCancelBtn visible="false"/>
+			<MsgBoxclosebtn visible="false"/>
+		</Case>
+		<Case name="caseTypeOneBtn">
+			<MsgBoxOkBtn visible="true"/>
+			<MsgBoxCancelBtn visible="false"/>
+		</Case>
+		<Case name="caseTypeTwoBtn">
+			<MsgBoxOkBtn visible="true"/>
+			<MsgBoxCancelBtn visible="true"/>
+		</Case>
+		
+		<Case name="caseShowNetDetail">
+			<NetDetailLayout visible="true"/>
+		</Case>
+		<Case name="caseCloseNetDetail">
+			<NetDetailLayout visible="false"/>
+		</Case>
+	</VerticalLayout>
+</Window>

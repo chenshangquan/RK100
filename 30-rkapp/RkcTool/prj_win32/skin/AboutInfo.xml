@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<PageAboutInfo >
+	<VerticalLayout name="AboutInfolayout" height="290">
+		<Label float="true" pos="0,18,0,0" width="100" height="16" text="关于" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		
+		<Label float="true" pos="0,60,0,0" width="100" height="16" text="设备型号" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		<Label float="true" pos="142,60,0,0" width="100" height="16" text="RK100" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		
+		<Label float="true" pos="0,102,0,0" width="150" height="16" text="设备名称" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		<Label float="true" pos="142,102,0,0" width="150" height="16" text="智能中控主机" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		
+		<Label float="true" pos="0,144,0,0" width="150" height="16" text="软件版本信息" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		<Label name="BuildVersion" float="true" pos="142,144,0,0" width="150" height="16" text="" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		
+		<Label float="true" pos="0,186,0,0" width="100" height="16" text="版权信息" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		<Label float="true" pos="142,186,0,0" width="500" height="16" text="Copyright © 1995-2018 苏州科达科技股份有限公司.All Rights Reserved" textcolor="#FF4E4E4E" font="1" align="left" mouse="false" gdiplus="false"/>
+		
+	</VerticalLayout>
+	
+</PageAboutInfo>

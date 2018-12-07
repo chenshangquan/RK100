@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!-- 
+Resolution：分辨率，默认为1920*1200，修改后界面等比拉伸
+ -->
+<system skin="skin\" Resolution="1100,720" />

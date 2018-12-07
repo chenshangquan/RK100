@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PageNetworkSetup>
+	<VerticalLayout name="NetworkSetuplayout">
+	
+		<VerticalLayout height="210">
+			<Edit float="true" pos="0,0,0,0" width="0" height="0" /><!--无用Edit 用于默认选中-->
+			<Label float="true" pos="0,18,0,0" width="100" height="18" text="设备网络" textcolor="#FF242424" font="0" align="left" />
+		
+			<Button name="SaveNetWorkBut" float="true" pos="760,13,0,0" width="80" height="28" text="保存" font="1" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+	
+			<Label float="true" pos="0,60,0,0" width="100" height="18" text="IP地址" textcolor="#FF4E4E4E" font="1" align="left" />
+			<Edit name="DeviceIPEdt" float="true" pos="110,59,0,0" width="260" height="20" text="" textcolor="#FF4E4E4E" font="1" align="left" maxchar="16" numberstyle="1"/>
+			<Label float="true" pos="110,79,0,0" width="260" height="1" bkcolor="#FF8b8b8b" />
+			<Button name="IPCheckBtn" float="true" pos="375,59,0,0" width="40" height="21" text="检测" textcolor="#ff007ac0" align="center" font="2" enabled="false" gdiplus="true"/>
+			<Label name="IPCheckOkLeb" float="true" pos="415,61,0,0" width="16" height="16" bkimage="res/public/button/judge_right.png" visible="false" gdiplus="false" />
+
+			<Label float="true" pos="0,110,0,0" width="100" height="18" text="子网掩码" textcolor="#FF4E4E4E" font="1" align="left" />
+			<Edit name="DeviceSubmaskEdt" float="true" pos="110,109,0,0" width="260" height="20" text="" textcolor="#FF4E4E4E" font="1" align="left" maxchar="16" numberstyle="1"/>
+			<Label float="true" pos="110,129,0,0" width="260" height="1" bkcolor="#FF8b8b8b" />
+
+			<Label float="true" pos="0,160,0,0" width="100" height="18" text="默认网关" textcolor="#FF4E4E4E" font="1" align="left" />
+			<Edit name="DeviceGatewayEdt" float="true" pos="110,159,0,0" width="260" height="20" text="" textcolor="#FF4E4E4E" font="1" align="left" maxchar="16" numberstyle="1"/>
+			<Label float="true" pos="110,179,0,0" width="260" height="1" bkcolor="#FF8b8b8b" />
+		</VerticalLayout>
+		
+		<VerticalLayout height="1">
+			<Label float="true" width="840" height="1" bkimage="res/public/scroll/line.png"/>
+		</VerticalLayout>
+		
+		<VerticalLayout>
+			<Label float="true" pos="0,29,0,0" width="100" height="18" text="平台网络" textcolor="#FF242424" font="0" align="left" />
+	
+			<Label float="true" pos="0,70,0,0" width="100" height="18" text="IP地址" textcolor="#FF4E4E4E" font="1" align="left" />
+			<Edit name="MqttIPEdt" float="true" pos="110,69,0,0" width="260" height="20" text="" tiptext="智能会议管理平台地址" tiptextcolor="#FFC4C4C4" textcolor="#FF4E4E4E" font="1" align="left" maxchar="16" numberstyle="1"/>
+			<Label float="true" pos="110,89,0,0" width="260" height="1" bkcolor="#FF8b8b8b" />
+			
+			<Label float="true" pos="0,120,0,0" width="100" height="18" text="端口" textcolor="#FF4E4E4E" font="1" align="left" />
+			<Edit name="MqttPortEdt" float="true" pos="110,119,0,0" width="260" height="20" text="" tiptext="默认端口1883" tiptextcolor="#FFC4C4C4" textcolor="#FF4E4E4E" font="1" align="left" maxchar="5" numberonly="true"/>
+			<Label float="true" pos="110,139,0,0" width="260" height="1" bkcolor="#FF8b8b8b" />
+		</VerticalLayout>
+		
+		<Case name="caseIPCheckOK">		<!--IP检测未冲突-->
+			<IPCheckBtn enabled="false" />
+			<IPCheckOkLeb visible="true"/>
+		</Case>
+		<Case name="caseIPNotCheck">		<!--IP检测未冲突（还未检测）-->
+			<IPCheckBtn enabled="true" />
+			<IPCheckOkLeb visible="false"/>
+		</Case>
+		<Case name="caseIPIsSave">		<!--已经成功保存-->
+			<IPCheckBtn enabled="false" />
+			<IPCheckOkLeb visible="false"/>
+		</Case>
+
+	</VerticalLayout>
+</PageNetworkSetup>

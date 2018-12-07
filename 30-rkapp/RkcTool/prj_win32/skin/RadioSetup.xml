@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PageRadioSetup>
+	<VerticalLayout name="RadioSetuplayout" >
+  
+		<Button name="SaveRadioBut" float="true" pos="760,13,0,0" width="80" height="28" text="保存" font="1" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+	
+		<Label float="true" pos="0,18,0,0" width="100" height="18" text="射频开关" textcolor="#FF242424" font="0" align="left" />
+		<Option name="RadioSwitchOpt" float="true" pos="110,13,0,0" width="63" height="23" normalimage="res/public/button/OFF.png" selectedimage="res/public/button/ON.png"  />
+		
+		<Label name="DevTypeSignLeb" float="true" pos="0,60,0,0" width="100" height="18" text="设备类型" textcolor="#FF4E4E4E" font="1" align="left" />
+		<Label name="DevTypeLeb" float="true" pos="110,59,0,0" width="260" height="20" text="单开无源无线控制面板" textcolor="#FF4E4E4E" font="1" align="left"/>
+		
+		<Label name="TipLab" float="true" pos="0,111,0,0" width="100" height="18" text="射频外设ID" textcolor="#FF4E4E4E" font="1" align="left" />
+		<List name="PeripheralList" float="true" pos="100,110,0,0" width="600" height="310" header="false" childpadding="18" itemhotbkcolor="#FFFFFFFF" itemselectedbkcolor="#FFFFFFFF" >
+			<ListHeader pos="0,1,0,0" float="true" visble="false"/>
+		</List>
+		
+		<Case name="NoRadio">
+			<TipLab visible="false"/>
+			<RadioIpEdt visible="false"/>
+			<IpEdtline visible="false"/>
+			<OpenRadioOpt visible="false"/>
+			<OpenRadioLab visible="false"/>
+			<CloseRadioOpt visible="false"/>
+			<CloseRadioLab visible="false"/>
+			<itemdelbut visible="false"/>
+			<itemaddbut visible="true" pos="0,1,30,19" tag="1"/>
+		</Case>
+		<Case name="LastRadio">
+			<TipLab visible="true"/>
+			<RadioIpEdt visible="true"/>
+			<IpEdtline visible="true"/>
+			<OpenRadioOpt visible="true"/>
+			<OpenRadioLab visible="true"/>
+			<CloseRadioOpt visible="true"/>
+			<CloseRadioLab visible="true"/>
+			<itemdelbut visible="true" pos="442,1,472,19" />
+			<itemaddbut visible="true" pos="486,1,516,19" tag="0"/>
+		</Case>
+		<Case name="NormalRadio">
+			<TipLab visible="true"/>
+			<RadioIpEdt visible="true"/>
+			<IpEdtline visible="true"/>
+			<OpenRadioOpt visible="true"/>
+			<OpenRadioLab visible="true"/>
+			<CloseRadioOpt visible="true"/>
+			<CloseRadioLab visible="true"/>
+			<itemdelbut visible="true" pos="442,1,472,19" />
+			<itemaddbut visible="false" tag="0"/>
+		</Case>
+	
+		<Case name="RadioON">
+			<DevTypeSignLeb visible="true"/>
+			<DevTypeLeb visible="true"/>
+			<TipLab visible="true"/>
+			<PeripheralList visible="true"/>
+		</Case>
+		<Case name="RadioOFF">
+			<DevTypeSignLeb visible="false"/>
+			<DevTypeLeb visible="false"/>
+			<TipLab visible="false"/>
+			<PeripheralList visible="false"/>
+		</Case>
+	
+	</VerticalLayout>
+</PageRadioSetup>

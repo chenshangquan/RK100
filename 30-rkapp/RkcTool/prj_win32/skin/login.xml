@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="400,260" roundcorner="1,0" bktrans="false" >
+<Font name="微软雅黑" size="12" bold="false" />
+	<VerticalLayout name="login" bkcolor="#4d000000" >
+		<!--HorizontalLayout /-->
+		<HorizontalLayout height="260" >
+			<!--VerticalLayout /-->
+			<VerticalLayout width="400" bkcolor="#feffffff" bordersize="1" bordercolor="ff555555">
+				<VerticalLayout height="40">
+					<Label float="true" pos="16,14,0,0" width="220" height="15" text="设备登录" textcolor="#ff4e4e4e" font="0" align="left" gdiplus="true" />
+					<Button name="closebtn" float="true" pos="366,9,0,0" width="23" height="23" normalimage="res/public/button/closenormal.png" hotimage="res/public/button/closehover.png"/>
+				</VerticalLayout>
+				<VerticalLayout height="1">
+					<Label float="true" pos="16,0,0,0" width="368" height="1" bkcolor="#feececec" gdiplus="true" />
+				</VerticalLayout>
+				<VerticalLayout>
+					<Edit name="edtUserName" float="true" pos="48,35,0,0" tiptext="请输入用户名" normalimage="file=&apos;res/logo/username.png&apos; dest=&apos;0,0,20,21&apos;" textpadding="25,0,0,0" maxchar="32" textcolor="#ff4e4e4e" font="0" width="304" height="22" align="left" gdiplus="true" nativebkcolor="#ffffffff"/>
+					<Label float="true" pos="48,57,0,0" width="304" height="1" bkcolor="#fe949799" gdiplus="true" />
+					<Edit name="edtPassWord" float="true" pos="48,85,0,0" tiptext="请输入密码" normalimage="file=&apos;res/logo/password.png&apos; dest=&apos;0,0,20,20&apos;" textpadding="25,0,0,0" maxchar="32" textcolor="#ff4e4e4e" font="0" width="304" height="22" align="left" gdiplus="true" nativebkcolor="#ffffffff" password="true"/>
+					<Label float="true" pos="48,107,0,0" width="304" height="1" bkcolor="#fe949799" gdiplus="true" />
+					
+					<Label name="LoginTipLeb" float="true" pos="48,114,0,0" width="400" height="18" text="用户名或密码错误" textcolor="#FFd53a3a" font="0" align="left" gdiplus="true" visible="false"/>
+
+					<Option name="CheckAutoLogin" float="true" pos="48,132,0,0" width="18" height="18" normalimage="res/public/button/checkbox_normal.png" selectedimage="res/public/button/checkbox_normal_selected.png" />
+					<Label float="true" pos="70,132,0,0" width="60" height="18" text="自动登录" textcolor="#FF4E4E4E" font="0" align="right" gdiplus="true" />
+					<Option name="CheckRemPassWord" float="true" pos="275,132,0,0" width="18" height="18" normalimage="res/public/button/checkbox_normal.png" selectedimage="res/public/button/checkbox_normal_selected.png" />
+					<Label float="true" pos="297,132,0,0" width="60" height="18" text="记住密码" textcolor="#FF4E4E4E" font="0" align="right" gdiplus="true" />
+					<Button name="LoginBtn" float="true" pos="48,156,0,0" width="304" height="40" text="登录" font="0" textcolor="ff5f5f5f" hottextcolor="ff007ac0" pushedtextcolor="ff5f5f5f" bkcolor="feeff2f4" pushedbkcolor="feffffff" bordersize="1" bordercolor="ffdcdfe1" gdiplus="true"/>
+				</VerticalLayout>
+			</VerticalLayout>
+			<!--VerticalLayout /-->
+		</HorizontalLayout>
+		<!--HorizontalLayout /-->
+		
+		<Case name="caseNormal">
+			<LoginBtn enabled="true"/>
+		</Case>
+		<Case name="caseIsLogining">
+			<LoginBtn enabled="false"/>
+		</Case>
+		
+		<Case name="caseShowTip">
+			<LoginTipLeb visible="true"/>
+		</Case>
+		<Case name="caseCloseTip">
+			<LoginTipLeb visible="false"/>
+		</Case>
+	
+	</VerticalLayout>
+</Window>

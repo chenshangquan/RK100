@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<subcontrol>
+ 
+	<EquipmentListItem> <!--设备列表-->
+		<ListContainerElement width="840" height="20"> 
+			<Label name="IndexLab" float="true" pos="0,0,0,0" width="47" height="20" font="2" textcolor="#FF8b8b8b" textpadding="5,0,0,0"/>
+			<Label name="ModelLab" float="true" pos="47,0,0,0" width="142" height="20" font="2" textcolor="#FF8b8b8b" />
+			<Label name="IPLab" float="true" pos="189,0,0,0" width="186" height="20" font="2" textcolor="#FF8b8b8b" />
+			<Label name="SNLab" float="true" pos="375,0,0,0" width="205" height="20" font="2" textcolor="#FF8b8b8b" />
+			<Label name="VersionLab" float="true" pos="580,0,0,0" width="141" height="20" font="2" textcolor="#FF8b8b8b" />
+			<Button name="OperateBtn" float="true" pos="721,0,0,0" width="40" height="20" text="调试" font="2" textcolor="#FF007ac0" /> 
+		</ListContainerElement>
+	</EquipmentListItem>
+	
+	<PeripheralListItem> <!--外设列表-->
+		<ListContainerElement width="600" height="20"> 
+			<!--Label name="TipLab" float="true" pos="0,1,0,0" width="100" height="18" text="射频外设ID" textcolor="#FF4E4E4E" font="1" align="left" /-->
+			<Edit name="RadioIpEdt" float="true" pos="10,0,0,0" width="260" height="20" text="" textcolor="#FF4E4E4E" font="1" align="left" maxchar="8" numberstyle="16" />
+			<Label name="IpEdtline" float="true" pos="10,19,0,0" width="260" height="1" bkcolor="#FF8b8b8b" />
+			
+			<Option name="OpenRadioOpt" float="true" pos="279,1,0,0" width="18" height="18" normalimage="res/public/button/radiobtn_disable_normal.png" selectedimage="res/public/button/radiobtn_disable_selected.png" selected="true"/>
+			<Label name="OpenRadioLab" float="true" pos="306,1,0,0" width="100" height="18" text="启用" textcolor="#FF4E4E4E" font="1" align="left" />
+			<Option name="CloseRadioOpt" float="true" pos="351,1,0,0" width="18" height="18" normalimage="res/public/button/radiobtn_disable_normal.png" selectedimage="res/public/button/radiobtn_disable_selected.png" />
+			<Label name="CloseRadioLab" float="true" pos="378,1,0,0" width="100" height="18" text="禁用" textcolor="#FF4E4E4E" font="1" align="left" />
+			
+			<Button name="itemdelbut" float="true" pos="442,1,0,0" width="30" height="18" text="删除" textcolor="#FF007ac0" font="1" align="center" />
+			<Button name="itemaddbut" float="true" pos="486,1,0,0" width="30" height="18" text="新增" textcolor="#FF007ac0" font="1" align="center" />
+			
+		</ListContainerElement>
+	</PeripheralListItem>
+  
+</subcontrol>

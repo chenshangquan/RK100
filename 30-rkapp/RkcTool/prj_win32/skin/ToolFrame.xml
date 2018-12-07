@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1100,620" roundcorner="1,0">
+<Font name="微软雅黑" size="14" bold="false" />
+<Font name="微软雅黑" size="12" bold="false" />
+<Font name="微软雅黑" size="12" bold="false" underline="true"/>
+	<HorizontalLayout name="ToolFrameLayout" bkcolor="#FFFFFFFF">
+		<VerticalLayout>	
+			<HorizontalLayout >
+				<VerticalLayout width="149">
+					<Option name="NetworkSetupOpt" float="true" pos="74,20,0,0" width="75" height="20" text="网络设置" font="0" normaltextcolor="#FF242424" selectedtextcolor="#FFFFFFFF" selectedimage="res/tab/LeftNavigation.png" group="toolfarmegroup" align="center" gdiplus="false" selected="true"/>
+					<Option name="RadioSetupOpt" float="true" pos="74,50,0,0" width="75" height="20" text="射频设置" font="0" normaltextcolor="#FF242424" selectedtextcolor="#FFFFFFFF" selectedimage="res/tab/LeftNavigation.png" group="toolfarmegroup" align="center" gdiplus="false" />
+					<Option name="WorkingModeOpt" float="true" pos="74,80,0,0" width="75" height="20" text="工作模式" font="0" normaltextcolor="#FF242424" selectedtextcolor="#FFFFFFFF" selectedimage="res/tab/LeftNavigation.png" group="toolfarmegroup" align="center" gdiplus="false" />
+					<Option name="BackupUpgradeOpt" float="true" pos="74,110,0,0" width="75" height="20" text="备份升级" font="0" normaltextcolor="#FF242424" selectedtextcolor="#FFFFFFFF" selectedimage="res/tab/LeftNavigation.png" group="toolfarmegroup" align="center" gdiplus="false" />
+					<Option name="DebugModeOpt" float="true" pos="74,140,0,0" width="75" height="20" text="调试模式" font="0" normaltextcolor="#FF242424" selectedtextcolor="#FFFFFFFF" selectedimage="res/tab/LeftNavigation.png" group="toolfarmegroup" align="center" gdiplus="false" />
+				</VerticalLayout>
+				<VerticalLayout width="72"/>
+				<VerticalLayout >
+					<TabLayout name="ToolFrameSlideTab" width="890" bkcolor="#FFFFFFFF">
+						<!-- 网络设置 -->
+						<VerticalLayout name="NetworkSetuplayout" >  
+							<ChildLayout xmlfile="NetworkSetup.xml" name="PageNetworkSetup"/>
+						</VerticalLayout>
+						<!-- 射频设置 -->
+						<VerticalLayout name="RadioSetuplayout" >  
+							<ChildLayout xmlfile="RadioSetup.xml" name="PageRadioSetup"/>
+						</VerticalLayout>
+						<!-- 工作模式 -->
+						<VerticalLayout name="WorkingModelayout" >  
+							<ChildLayout xmlfile="WorkingMode.xml" name="PageWorkingMode"/>
+						</VerticalLayout>
+						<!-- 备份升级 -->
+						<VerticalLayout name="BackupUpgradelayout" >  
+							<ChildLayout xmlfile="BackupUpgrade.xml" name="PageBackupUpgrade"/>
+						</VerticalLayout>
+						<!-- 调试模式 -->
+						<VerticalLayout name="DebugModelayout" >  
+							<ChildLayout xmlfile="DebugMode.xml" name="PageDebugMode"/>
+						</VerticalLayout>
+						<!-- 修改密码 -->
+						<VerticalLayout name="ModifyPasswordlayout" >  
+							<ChildLayout xmlfile="ModifyPassword.xml" name="PageModifyPassword"/>
+						</VerticalLayout>
+						<!-- 关于信息 -->
+						<VerticalLayout name="AboutInfolayout" >  
+							<ChildLayout xmlfile="AboutInfo.xml" name="PageAboutInfo"/>
+						</VerticalLayout>
+					</TabLayout>
+				</VerticalLayout>
+			</HorizontalLayout>
+			<HorizontalLayout height="47" >
+				<Label float="true" pos="221,0,0,0" width="840" height="2" bkcolor="#FF949799" gdiplus="false" />
+				<Label name="BottomLeb" float="true" pos="221,17,0,0" width="840" height="15" text="" textcolor="#FF606060" font="1" align="center" gdiplus="false" />
+				
+				<!--Label float="true" pos="385,17,0,0" width="45" height="15" text="设备IP:" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				<Label name="BottomIPLeb" float="true" pos="430,17,0,0" width="110" height="15" text="1.2.3.4" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				
+				<Label float="true" pos="545,17,0,0" width="60" height="15" text="设备型号:" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				<Label name="BottomTypeLeb" float="true" pos="605,17,0,0" width="50" height="15" text="RK100" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				
+				<Label float="true" pos="660,17,0,0" width="45" height="15" text="版本号:" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				<Label name="BottomVerLeb" float="true" pos="705,17,0,0" width="60" height="15" text="V5.2 sp3" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				
+				<Label float="true" pos="770,17,0,0" width="35" height="15" text="功耗:" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				<Label float="true" pos="805,17,0,0" width="50" height="15" text="50W/H" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				
+				<Label float="true" pos="865,17,0,0" width="35" height="15" text="电流:" textcolor="#FF606060" font="1" align="left" gdiplus="true" />
+				<Label float="true" pos="895,17,0,0" width="50" height="15" text="50A" textcolor="#FF606060" font="1" align="left" gdiplus="true" /-->
+			</HorizontalLayout>
+			<Case name="caseMenuItemSel">	<!--MenuItem selected-->
+				<NetworkSetupOpt selected="false"/>
+				<RadioSetupOpt selected="false"/>
+				<WorkingModeOpt selected="false"/>
+				<BackupUpgradeOpt selected="false"/>
+				<DebugModeOpt selected="false"/>
+			</Case>
+		</VerticalLayout>
+	</HorizontalLayout>
+</Window>

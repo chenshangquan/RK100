@@ -1,0 +1,205 @@
+//===========================================================================
+//
+//  File Name:    Setup.rul
+//
+//  Description:  Blank setup main script file
+//
+//  Comments:     Blank setup is an empty setup project. If you want to
+//				  create a new project via. step-by step instructions use the
+//				  Project Assistant.
+//
+//===========================================================================
+
+// Included header files ----------------------------------------------------
+#include "ifx.h"
+
+
+//---------------------------------------------------------------------------                                                                        
+// OnFirstUIBefore
+//
+// First Install UI Sequence - Before Move Data
+//
+// The OnFirstUIBefore event is called by OnShowUI when the setup is
+// running in first install mode. By default this event displays UI allowing
+// the end user to specify installation parameters.
+//
+// Note: This event will not be called automatically in a
+// program...endprogram style setup.
+//---------------------------------------------------------------------------
+function OnFirstUIBefore()
+    number  nResult, nLevel, nSize, nSetupType;
+    string  szTitle, szMsg, szOpt1, szOpt2, szLicenseFile;
+    string  szName, szCompany, szTargetPath, szDir, szFeatures;
+    BOOL    bLicenseAccepted;	
+begin	
+   
+    nSetupType = COMPLETE;	
+    szDir = TARGETDIR;
+    szName = "";
+    szCompany = "";
+    bLicenseAccepted = FALSE;
+
+// Beginning of UI Sequence
+Dlg_Start:
+    nResult = 0;
+
+Dlg_SdWelcome:
+    szTitle = "";
+    szMsg = "";
+    //{{IS_SCRIPT_TAG(Dlg_SdWelcome)
+    nResult = SdWelcome( szTitle, szMsg );
+    //}}IS_SCRIPT_TAG(Dlg_SdWelcome)
+    if (nResult = BACK) goto Dlg_Start;
+
+Dlg_SdLicense2:
+    szTitle = "";
+    szOpt1 = "";
+    szOpt2 = "";
+    //{{IS_SCRIPT_TAG(License_File_Path)
+    szLicenseFile = SUPPORTDIR ^ "License.rtf";
+    //}}IS_SCRIPT_TAG(License_File_Path)
+    //{{IS_SCRIPT_TAG(Dlg_SdLicense2)
+   // nResult = SdLicense2Rtf( szTitle, szOpt1, szOpt2, szLicenseFile, bLicenseAccepted );
+    //}}IS_SCRIPT_TAG(Dlg_SdLicense2)
+    if (nResult = BACK) then
+        goto Dlg_SdWelcome;
+    else
+        bLicenseAccepted = TRUE;
+    endif;
+
+Dlg_SdRegisterUser:
+    szMsg = "";
+    szTitle = "";
+    //{{IS_SCRIPT_TAG(Dlg_SdRegisterUser)	
+   // nResult = SdRegisterUser( szTitle, szMsg, szName, szCompany );
+    //}}IS_SCRIPT_TAG(Dlg_SdRegisterUser)
+    if (nResult = BACK) goto Dlg_SdLicense2;
+
+Dlg_SetupType2:   
+    szTitle = "";
+    szMsg = "";
+    nResult = CUSTOM;
+    //{{IS_SCRIPT_TAG(Dlg_SetupType2)	
+   // nResult = SetupType2( szTitle, szMsg, "", nSetupType, 0 );
+    //}}IS_SCRIPT_TAG(Dlg_SetupType2)
+    if (nResult = BACK) then
+        goto Dlg_SdRegisterUser;
+    else
+        nSetupType = nResult;
+        if (nSetupType != CUSTOM) then
+            szTargetPath = TARGETDIR;
+            nSize = 0;
+            FeatureCompareSizeRequired( MEDIA, szTargetPath, nSize );
+            if (nSize != 0) then      
+                MessageBox( szSdStr_NotEnoughSpace, WARNING );
+                goto Dlg_SetupType2;
+            endif;
+        endif;   
+    endif;
+
+Dlg_SdAskDestPath2:
+    Disable( BACKBUTTON );
+    if ((nResult = BACK) && (nSetupType != CUSTOM)) goto Dlg_SetupType2;
+	szTitle = "";
+    szMsg = "";
+    if (nSetupType = CUSTOM) then
+                //{{IS_SCRIPT_TAG(Dlg_SdAskDestPath2)	
+		nResult = SdAskDestPath2( szTitle, szMsg, szDir );
+                //}}IS_SCRIPT_TAG(Dlg_SdAskDestPath2)
+        TARGETDIR = szDir;
+    endif;
+    if (nResult = BACK) goto Dlg_SetupType2;
+    
+    Enable( BACKBUTTON );
+
+Dlg_SdFeatureTree: 
+    if ((nResult = BACK) && (nSetupType != CUSTOM)) goto Dlg_SdAskDestPath2;
+    szTitle = "";
+    szMsg = "";
+    szFeatures = "";
+    nLevel = 2;
+    if (nSetupType = CUSTOM) then
+        //{{IS_SCRIPT_TAG(Dlg_SdFeatureTree)	
+       // nResult = SdFeatureTree( szTitle, szMsg, TARGETDIR, szFeatures, nLevel );
+        //}}IS_SCRIPT_TAG(Dlg_SdFeatureTree)
+        if (nResult = BACK) goto Dlg_SdAskDestPath2;  
+    endif;
+
+Dlg_SQLServer:
+    nResult = OnSQLServerInitialize( nResult );
+    if( nResult = BACK ) goto Dlg_SdFeatureTree;
+
+Dlg_ObjDialogs:
+    nResult = ShowObjWizardPages( nResult );
+    if (nResult = BACK) goto Dlg_SQLServer;
+    
+Dlg_SdStartCopy2:
+    szTitle = "";
+    szMsg = "";
+    //{{IS_SCRIPT_TAG(Dlg_SdStartCopy2)	
+    nResult = SdStartCopy2( szTitle, szMsg );	
+    //}}IS_SCRIPT_TAG(Dlg_SdStartCopy2)
+    if (nResult = BACK) goto Dlg_ObjDialogs;
+
+    // Added in 11.0 - Set appropriate StatusEx static text.
+    SetStatusExStaticText( SdLoadString( IDS_IFX_STATUSEX_STATICTEXT_FIRSTUI ) );
+ 
+    return 0;
+end;
+
+//---------------------------------------------------------------------------
+// OnUninstallingFile
+//
+// The OnUninstallingFile event is called when a file is about to be
+// uninstalled as a result of FeatureTransferData or FeatureMoveData.
+//
+// szFile will contain the full path of file about to be uninstalled.
+//---------------------------------------------------------------------------
+function OnUninstallingFile(szFile)
+begin
+
+    
+end;
+//---------------------------------------------------------------------------
+// OnMoved
+//
+// The OnMoved event is called as a result of the setup calling
+// FeatureTransferData or FeatureMoveData. The event is called when
+// all file transfer operations are completed except for batch
+// self-registration which is performed immediately after this event returns.
+// During uninstallation this event sent after uninstallation is completed,
+// therefore you should not modify system state in this event.
+//---------------------------------------------------------------------------
+function OnMoved()
+//NUMBER nRootKey;
+//string szExePath; 
+//string szQQSkinCmdLie;  
+begin 
+    // 修改启动项，将桌面替换为kdv1000
+    //nRootKey = HKEY_LOCAL_MACHINE;
+    //RegDBSetDefaultRoot(nRootKey);
+    
+    //if (MAINTENANCE) then
+
+    //    szExePath  = "Explorer.exe";
+        
+   // else
+    
+   //     szExePath  = TARGETDIR + "\\loadcnc.exe";
+       
+   // endif;
+    
+    // 修改启动项，将桌面替换为cnc
+    //RegDBSetKeyValueEx ( "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon", "Shell", REGDB_STRING, szExePath, -1 );
+   
+    // 安装QQ输入法
+	//LaunchAppAndWait (TARGETDIR ^ "sogou_pinyin_42_4811.exe", TARGETDIR, WAIT);
+    
+    // 安装qq输入法皮肤  
+    //szQQSkinCmdLie = " -install " + "\"" + TARGETDIR + "cnc.qpys" + "\"";
+	//LaunchAppAndWait (TARGETDIR ^ "qqimeregskin.exe", szQQSkinCmdLie, WAIT);  
+	
+    // 删除临时生成的搜狗输入法安装程序
+	//DeleteFile(TARGETDIR ^ "sogou_pinyin_42_4811.exe"); 
+   
+end;

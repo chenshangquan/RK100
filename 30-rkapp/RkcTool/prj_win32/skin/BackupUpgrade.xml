@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PageBackupUpgrade>
+	<VerticalLayout name="BackupUpgradelayout" >
+  
+		<VerticalLayout>
+				<VerticalLayout height="50">
+					<Option name="ConfigurationBackupOpt" float="true" pos="0,22,0,0" width="112" height="22" text="配置备份/升级" font="1" textcolor="ffffffff" bkcolor="ff313438" selectedimage="res\public\button\bottonbk.png" group="BackupUpgradeTap" selected="true"/>
+					<Option name="EquipmentUpgradingOpt" float="true" pos="116,22,0,0" width="82" height="22" text="设备升级" font="1" textcolor="ffffffff" bkcolor="ff313438" selectedimage="res\public\button\bottonbk.png" group="BackupUpgradeTap" />
+					<Option name="RestoredOriginalOpt" float="true" pos="202,22,0,0" width="82" height="22" text="恢复出厂" font="1" textcolor="ffffffff" bkcolor="ff313438" selectedimage="res\public\button\bottonbk.png" group="BackupUpgradeTap" />
+				</VerticalLayout>
+				<VerticalLayout>
+					<TabLayout name="BackupUpgradeTab" >
+						<VerticalLayout>
+							<Label float="true" pos="0,18,0,0" width="100" height="18" text="配置文件" textcolor="#FF242424" font="0" align="left" />
+							<Button name="backupsBtn" float="true" pos="120,16,0,0" width="65" height="24" text="备份" font="0" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+							<Button name="ImportBtn" float="true" pos="195,16,0,0" width="65" height="24" text="导入" font="0" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+						</VerticalLayout>
+						
+						<VerticalLayout>
+							<VerticalLayout height="150">
+								<Label float="true" pos="0,29,0,0" width="100" height="18" text="选择文件" textcolor="#FF242424" font="0" align="left" />
+								<Edit name="UpgradeFilePathEdt" float="true" pos="116,24,0,0" width="240" height="30" bordersize="1" bordercolor="#FFDCDFE1" textcolor="#FF242424" font="0" align="left" enabled="false"/>
+								<Button name="UpgradeFilePathBtn" float="true" pos="362,27,0,0" width="65" height="24" text="浏览" font="0" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+								<Button name="UpLoadFileBtn" float="true" pos="433,27,0,0" width="65" height="24" text="升级" font="0" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1" enabled="false"/>
+								
+								<Label float="true" pos="0,60,0,0" width="100" height="18" text="进度" textcolor="#FF242424" font="0" align="left" />
+								<Label name="UpgradeFileLab" float="true" pos="116,64,0,0" width="240" height="18" text="请选择升级文件上传！" textcolor="#FF242424" font="1" align="left"/>
+								
+								<Label name="CurrentVerLab" float="true" pos="116,64,0,0" width="80" height="18" text="当前版本" textcolor="#FF242424" font="1" align="left" visible="false"/>
+								<Label name="CurrentVerShowLab" float="true" pos="200,64,0,0" width="240" height="18" text="" textcolor="#FF242424" font="1" align="left" visible="false"/>
+								<Label name="UpgradeVerLab" float="true" pos="116,90,0,0" width="240" height="18" text="上传版本" textcolor="#FF242424" font="1" align="left" visible="false"/>
+								<Label name="UpgradeVerShowLab" float="true" pos="200,90,0,0" width="240" height="18" text="" textcolor="#FF242424" font="1" align="left" visible="false"/>
+							</VerticalLayout>
+							<VerticalLayout>
+								
+							</VerticalLayout>
+						</VerticalLayout>
+						
+						<VerticalLayout>
+							<Button name="RestoreRkBtn" float="true" pos="760,15,0,0" width="65" height="24" text="提交" font="0" textcolor="ff5f5f5f" hottextcolor="ffffffff" pushedtextcolor="ff007ac0" bkcolor="feeff2f4" hotimage="res\public\button\bottonbk.png" pushedbkcolor="feffffff" bordersize="1" bordercolor="fedcdfe1"/>
+							<Label float="true" pos="0,18,0,0" width="100" height="18" text="设备密码" textcolor="#FF242424" font="0" align="left" />
+							<Edit name="PasswardEdt" password="true" float="true" pos="120,16,0,0" width="200" height="22" tiptext="恢复出厂需要输入设备密码" tiptextcolor="#FFC4C4C4" text="" textcolor="#FF4E4E4E" font="1" align="left" maxchar="16" gdiplus="false" />
+							<Label name="PWTipLeb" float="true" pos="330,16,0,0" width="100" height="22" text="密码错误" textcolor="#FFd53a3a" font="1" align="left" gdiplus="false" visible="false"/>
+							<Label float="true" pos="120,38,0,0" width="200" height="1" bkcolor="#FF8b8b8b" gdiplus="false" />
+						</VerticalLayout>
+					</TabLayout>
+				</VerticalLayout>
+			</VerticalLayout>
+			
+		<Case name="caseNoFilePath">
+			<UpgradeFilePathBtn enabled="true"/>
+			<UpLoadFileBtn enabled="false"/>
+			<UpgradeFileLab text="请选择升级文件上传！" textcolor="#FF242424" visible="true"/>
+			<CurrentVerLab visible="false"/>
+			<CurrentVerShowLab visible="false"/>
+			<UpgradeVerLab visible="false"/>
+			<UpgradeVerShowLab visible="false"/>
+		</Case>
+		<Case name="caseCheckFilePath">
+			<UpgradeFilePathBtn enabled="true"/>
+			<UpLoadFileBtn enabled="true"/>
+			<UpgradeFileLab text="文件已选择" textcolor="#FF242424" visible="false"/>
+			<CurrentVerLab visible="true"/>
+			<CurrentVerShowLab visible="true"/>
+			<UpgradeVerLab visible="true"/>
+			<UpgradeVerShowLab visible="true"/>
+		</Case>
+		<Case name="caseUpLoadFile">
+			<UpgradeFilePathBtn enabled="false"/>
+			<UpLoadFileBtn enabled="false"/>
+			<UpgradeFileLab text="文件上传中..." textcolor="#FF242424" visible="true"/>
+			<CurrentVerLab visible="false"/>
+			<CurrentVerShowLab visible="false"/>
+			<UpgradeVerLab visible="false"/>
+			<UpgradeVerShowLab visible="false"/>
+		</Case>
+		<Case name="caseUpLoadFileFail">
+			<UpgradeFilePathBtn enabled="true"/>
+			<UpLoadFileBtn enabled="false"/>
+			<UpgradeFileLab text="升级文件上传失败，请重新上传！" textcolor="#FFd53a3a" visible="true"/>
+			<CurrentVerLab visible="false"/>
+			<CurrentVerShowLab visible="false"/>
+			<UpgradeVerLab visible="false"/>
+			<UpgradeVerShowLab visible="false"/>
+		</Case>
+		<Case name="caseUpLoadFileSuccess">
+			<UpgradeFilePathBtn enabled="true"/>
+			<UpLoadFileBtn enabled="true"/>
+			<UpgradeFileLab text="升级文件上传成功！" textcolor="#FF242424" visible="true"/>
+			<CurrentVerLab visible="false"/>
+			<CurrentVerShowLab visible="false"/>
+			<UpgradeVerLab visible="false"/>
+			<UpgradeVerShowLab visible="false"/>
+		</Case>
+	</VerticalLayout>
+</PageBackupUpgrade>

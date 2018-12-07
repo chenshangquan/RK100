@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window sizebox="0,0,0,0" caption="0,0,0,0" size="117,141" roundcorner="1,0" >
+<Font name="微软雅黑" size="12" bold="false" />
+	<VerticalLayout name="SetMenuLayout" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#FFDADADA">
+		<VerticalLayout height="1"/>
+		<HorizontalLayout>
+			<HorizontalLayout width="1"/>
+			<VerticalLayout>
+			<List name="SetMenuList" header="hidden" itemfont="0" itemtextcolor="#FF4E4E4E" itemtextpadding="25,0,0,0" itembkcolor="#FFFFFFFF" itemhottextcolor="#FFFFFFFF" itemhotbkcolor="#FF1E94DA" itemselectedtextcolor="#FF4E4E4E" itemselectedbkcolor="">
+				<ListLabelElement name="Empty" height="20" selected="true" />
+				<ListLabelElement name="ModifyPasswrd" text="密码修改" height="33" valign="center" gdiplus="false"/>
+				<ListLabelElement name="Reboot" text="重启服务器" height="33" valign="center" gdiplus="false"/>
+				<ListLabelElement name="About" text="关于" height="33" valign="center" gdiplus="false"/>
+			</List >
+			</VerticalLayout>
+			<HorizontalLayout width="1"/>
+		</HorizontalLayout>
+		<VerticalLayout height="21"/>
+		<Case name="caseMenuInit">	<!-- 菜单初始化 -->
+			<Empty selected="true"/>
+		</Case>
+	</VerticalLayout>
+</Window>

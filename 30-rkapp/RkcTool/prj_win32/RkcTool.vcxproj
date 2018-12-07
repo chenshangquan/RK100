@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BBD4E44B-D57E-4B79-9D33-58D55391D41A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RkcTool</RootNamespace>
+    <ProjectName>RkcTool</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\10-common\include\tp;..\..\..\10-common\include\platform;..\..\..\10-common\include\nms1;..\..\..\10-common\include\system1;..\include;..\..\common_2010\include;..\..\common_2010\common-header;..\..\AppFrame\include;..\..\duilib</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\10-common\lib\debug\win32_2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>mfco42d.lib;mfc42d.lib;mfcs42d.lib;nafxcwd.lib;libcmtd.lib;LIBCD.lib;LIBCMT.lib;LIBC.lib;strmbasd.lib;dxguid.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\10-common\include\tp;..\..\..\10-common\include\platform;..\..\..\10-common\include\nms1;..\..\..\10-common\include\system1;..\include;..\..\common_2010\include;..\..\common_2010\common-header;..\..\AppFrame\include;..\..\duilib</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\10-common\lib\release\win32_2010;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>mfco42d.lib;mfc42d.lib;mfcs42d.lib;nafxcwd.lib;libcmtd.lib;LIBCD.lib;LIBCMT.lib;LIBC.lib;strmbasd.lib;dxguid.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\backupupgradelogic.h" />
+    <ClInclude Include="..\include\constdef.h" />
+    <ClInclude Include="..\include\debugmodelogic.h" />
+    <ClInclude Include="..\include\globalheader.h" />
+    <ClInclude Include="..\include\loginlogic.h" />
+    <ClInclude Include="..\include\messageboxlogic.h" />
+    <ClInclude Include="..\include\modifypasswordlogic.h" />
+    <ClInclude Include="..\include\netchangelogic.h" />
+    <ClInclude Include="..\include\networksetuplogic.h" />
+    <ClInclude Include="..\include\radiosetuplogic.h" />
+    <ClInclude Include="..\include\rkcinterface.h" />
+    <ClInclude Include="..\include\searchequipmentlogic.h" />
+    <ClInclude Include="..\include\rkctoolcommonop.h" />
+    <ClInclude Include="..\include\rkctoolmsgmanager.h" />
+    <ClInclude Include="..\include\setmenulogic.h" />
+    <ClInclude Include="..\include\system.h" />
+    <ClInclude Include="..\include\tipboxlogic.h" />
+    <ClInclude Include="..\include\toolframelogic.h" />
+    <ClInclude Include="..\include\UIDataMgr.h" />
+    <ClInclude Include="..\include\workingmodelogic.h" />
+    <ClInclude Include="rkctool.h" />
+    <ClInclude Include="rkctoolDlg.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\source\backupupgradelogic.cpp" />
+    <ClCompile Include="..\source\debugmodelogic.cpp" />
+    <ClCompile Include="..\source\loginlogic.cpp" />
+    <ClCompile Include="..\source\messageboxlogic.cpp" />
+    <ClCompile Include="..\source\modifypasswordlogic.cpp" />
+    <ClCompile Include="..\source\netchangelogic.cpp" />
+    <ClCompile Include="..\source\networksetuplogic.cpp" />
+    <ClCompile Include="..\source\radiosetuplogic.cpp" />
+    <ClCompile Include="..\source\rkcconfigctrlif.cpp" />
+    <ClCompile Include="..\source\rkcinterface.cpp" />
+    <ClCompile Include="..\source\rkcsearchif.cpp" />
+    <ClCompile Include="..\source\rkcsysctrlif.cpp" />
+    <ClCompile Include="..\source\searchequipmentlogic.cpp" />
+    <ClCompile Include="..\source\rkctoolcommonop.cpp" />
+    <ClCompile Include="..\source\rkctoolmsgmanager.cpp" />
+    <ClCompile Include="..\source\setmenulogic.cpp" />
+    <ClCompile Include="..\source\system.cpp" />
+    <ClCompile Include="..\source\tipboxlogic.cpp" />
+    <ClCompile Include="..\source\toolframelogic.cpp" />
+    <ClCompile Include="..\source\UIDataMgr.cpp" />
+    <ClCompile Include="..\source\workingmodelogic.cpp" />
+    <ClCompile Include="rkctool.cpp" />
+    <ClCompile Include="rkctoolDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RkcTool.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\rkctool.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
