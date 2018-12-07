@@ -1,0 +1,29 @@
+// Logger.cpp: implementation of the CLogger class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "Logger.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+namespace AppFrame
+{
+	
+CLogger::CLogger()
+{
+
+}
+
+CLogger::~CLogger()
+{
+
+}
+
+bool CLogger::LogEvent( LPCTSTR lpszEvent, LogLevel emLoglv /* = Standard */ )
+{
+	return true;
+}
+
+} // namespace AppFrame end 
