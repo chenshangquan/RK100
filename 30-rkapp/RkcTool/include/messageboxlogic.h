@@ -57,6 +57,8 @@ protected:
 
     //设备重启反馈
     bool OnRkcRestone( WPARAM wparam, LPARAM lparam, bool& bHandle );
+
+    bool OnRkcDisconnected( WPARAM wparam, LPARAM lparam, bool& bHandle );
     
     APP_DECLARE_MSG_MAP()
 

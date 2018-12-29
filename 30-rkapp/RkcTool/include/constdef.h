@@ -1,4 +1,4 @@
-/** @defgroup cnc常量定义 
+/** @defgroup rkc常量定义 
  *  @version V1.1.4
  *  @author  叶良平
  *  @date    2017.12.19

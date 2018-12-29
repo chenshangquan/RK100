@@ -125,7 +125,7 @@ bool CModifyPasswordLogic::IsConfigChange()
     }
 }
 
-bool CModifyPasswordLogic::ExitCheckChange()
+u8 CModifyPasswordLogic::ExitCheckChange()
 {
     String strCurPwd = (IRkcToolCommonOp::GetControlText( m_pm ,_T("InputCurPwd"))).c_str();
     String strNewPwd = (IRkcToolCommonOp::GetControlText( m_pm ,_T("InputNewPwd"))).c_str();
@@ -134,20 +134,23 @@ bool CModifyPasswordLogic::ExitCheckChange()
     if (strCurPwd == _T("") && strNewPwd == _T("") && strCfmPwd == _T(""))
     {
         OnResetAllInput();
-        return false;
+        return 2;
     }
     else
     {
         int nBoxRe = ShowMessageBox(_T("是否保存当前修改内容"),2);
         if (nBoxRe == IDOK)
         {
-            OnSaveNewPwdClicked();
-            return true;
+            return OnSaveNewPwdClicked() ? 3 : 1;
+        }
+        else if (nBoxRe == IDNO)
+        {
+            return 1;
         }
         else
         {
             OnResetAllInput();
-            return false;
+            return 2;
         }
     }
 }

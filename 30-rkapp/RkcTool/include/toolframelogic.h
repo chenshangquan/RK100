@@ -41,6 +41,9 @@ public:
     //判断配置项是否修改 修改后是否保存 返回值 0->没有修改配置 1->点击保存配置 3->点击取消保存配置
     u8 ExitCheckChange();
 
+    //切换Tab被强制返回
+    void CheckTabReback(CControlUI* pSender = NULL);
+
 protected:
 	/** 窗口创建 
 	*  @param[in] 消息
@@ -83,6 +86,8 @@ protected:
     bool IsConfigChange();
 
     bool OnRkcPowerReflesh( WPARAM wparam, LPARAM lparam, bool& bHandle );
+
+    bool OnRkcConnected( WPARAM wparam, LPARAM lparam, bool& bHandle );
 
     bool OnRkcDisconnected( WPARAM wparam, LPARAM lparam, bool& bHandle );
 

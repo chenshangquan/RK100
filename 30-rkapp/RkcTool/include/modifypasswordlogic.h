@@ -26,7 +26,7 @@ public:
     // 判断配置项是否修改 修改后是否保存
     bool IsConfigChange();
     // 判断配置项是否修改 不修改则退出
-    bool ExitCheckChange();
+    u8 ExitCheckChange();
 
     // 创建帮助窗口
     void OnGreatePwdHelpWind();

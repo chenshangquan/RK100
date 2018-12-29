@@ -1,4 +1,4 @@
-/** @defgroup cnc调用urllib的公共接口 
+/** @defgroup rkc调用rkclib的公共接口 
  *  @version V1.0.0
  *  @author  叶良平
  *  @date    2018.3.23

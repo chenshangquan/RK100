@@ -83,10 +83,24 @@ bool CSetMenuLogic::OnRebootItemClicked(TNotifyUI& msg)
     //隐藏菜单
     WINDOW_MGR_PTR->ShowWindow(g_stcStrSetMenuDlg.c_str(), false);
 
-    int nBoxRe = ShowMessageBox(_T("确定重启设备？"),2);
-    if (nBoxRe == IDOK)
+    u8 byCgeckChange = CToolFrameLogic::GetSingletonPtr()->ExitCheckChange();
+    if (byCgeckChange == 1)
+    {
+        return false;
+    }
+    else if (byCgeckChange == 2)
     {
         CRkcComInterface->ReBootRk();
+        return true;
+    }
+    else
+    {
+        int nBoxRe = ShowMessageBox(_T("确定重启设备？"),2);
+        if (nBoxRe == IDOK)
+        {
+            CRkcComInterface->ReBootRk();
+        }
+        return true;
     }
 
     return true;

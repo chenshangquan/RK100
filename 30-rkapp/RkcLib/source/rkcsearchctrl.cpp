@@ -82,11 +82,7 @@ u16 CRkcSearchCtrl::StartSearch()
 {
     if (m_EmSearchType == emTypeIP)
     {
-        for (unsigned int nStart = m_dwStartIP; nStart <= m_dwEndIP ; nStart++)
-        {
-            SendDevDetectMsgByUnicast(true, nStart, nStart);
-            Sleep(20);
-        }
+        SendDevDetectMsgByUnicast(true, m_dwStartIP, m_dwEndIP);
     }
     else
     {

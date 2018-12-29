@@ -36,7 +36,7 @@ u16 CRkcInterface::SocketConnect(TDevItem tDevItem , s8* szUser , s8* szPwd)
     strncpy(m_tRK100LoginInfo.szUsr, szUser, sizeof(m_tRK100LoginInfo.szUsr));
     strncpy(m_tRK100LoginInfo.szPwd, szPwd, sizeof(m_tRK100LoginInfo.szPwd));
 
-    //连接cns
+    //连接rkc100
     AfxBeginThread( ThreadConnectRkc , NULL );
 
     return NO_ERROR;

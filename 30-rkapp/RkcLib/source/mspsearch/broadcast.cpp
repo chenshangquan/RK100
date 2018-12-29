@@ -32,6 +32,8 @@
 #define INVALID_SOCKET        (-1)
 #endif // _LINUX_
 
+SOCKHANDLE m_bcSocketUnicastDetect;
+
 CBroadcast::CBroadcast()
 {
 	m_bInited = false;
@@ -696,25 +698,25 @@ bool CBroadcast::SendUnicastDetectPackage( u8* pSrcMacAddr, u32 dwDstIP)
     // 
     // 创建SOCKET,并设置该套接字为组播类型
     // 
-    SOCKHANDLE bcSocket;
-    bcSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);;
-    if (INVALID_SOCKET == bcSocket)
-    {
-        delete[] pMsgBuf;
-        pMsgBuf = NULL;
-        return FALSE;
-    }
+//     SOCKHANDLE bcSocket;
+//     bcSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);;
+//     if (INVALID_SOCKET == bcSocket)
+//     {
+//         delete[] pMsgBuf;
+//         pMsgBuf = NULL;
+//         return FALSE;
+//     }
 
     sockaddr_in addrto;
     addrto.sin_family = AF_INET;
     addrto.sin_addr.s_addr = dwDstIP;									// 单播地址
     addrto.sin_port = htons(DT_PORT);
     printf("----------[Line=%d] send to ip = %s\n", __LINE__, inet_ntoa(addrto.sin_addr));
-    int nRetValue = sendto(bcSocket, (const s8*)pMsgBuf, nMsgLen, 0, (sockaddr*)&addrto, sizeof(addrto));
+    int nRetValue = sendto(m_bcSocketUnicastDetect, (const s8*)pMsgBuf, nMsgLen, 0, (sockaddr*)&addrto, sizeof(addrto));
     delete[] pMsgBuf;
     pMsgBuf = NULL;
 
-    closesock(bcSocket);
+//    closesock(bcSocket);
     return true;
 }
 
@@ -1041,10 +1043,20 @@ bool CBroadcast::SendDevDetectMsgByUnicast(bool bRefreshAdapter, u32 dwStart, u3
     bool bRst = false;
     for (u32 i = 0; i < m_dwLocalAdapterCount; i++)
     {
+        // 创建SOCKET,并设置该套接字为组播类型
+        m_bcSocketUnicastDetect = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);;
+        if (INVALID_SOCKET == m_bcSocketUnicastDetect)
+        {
+            return FALSE;
+        }
+
         for (u32 iIp = dwStart; iIp <= dwEnd && iIp <= (dwStart + 510) ; iIp++)
         {
-            bRst = SendUnicastDetectPackage( m_atLoalAddr[i].atMac.abyMac, htonl(iIp) );
+            bRst = SendUnicastDetectPackage( m_atLoalAddr[i].atMac.abyMac, htonl(iIp));
+            Sleep(20);
         }
+        // 关闭SOCKET
+        closesock(m_bcSocketUnicastDetect);
     }
 
     return bRst;

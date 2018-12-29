@@ -24,6 +24,7 @@ APP_BEGIN_MSG_MAP(CMessageBoxLogic, CNotifyUIImpl)
     MSG_CLICK(_T("BackUpsLayout"), OnSpaceLayoutClicked)
 
     USER_MSG(UI_RKC_RESTONE , OnRkcRestone)
+    USER_MSG(UI_RKC_DISCONNECTED , OnRkcDisconnected)
 APP_END_MSG_MAP()
 
 static u8       m_byBoxType = 0;//0 消息弹窗 1 导入升级弹窗
@@ -259,6 +260,18 @@ bool CMessageBoxLogic::OnRkcRestone( WPARAM wparam, LPARAM lparam, bool& bHandle
         m_emOperation = Emue_Restore;
         m_pm->DoCase(_T("caseTypeOneBtn"));
         IRkcToolCommonOp::SetControlText( _T("恢复出厂成功，请重新登录"), m_pm, _T("LabelTip") );
+    }
+    return true;
+}
+
+bool CMessageBoxLogic::OnRkcDisconnected( WPARAM wparam, LPARAM lparam, bool& bHandle )
+{
+    if (wcscmp( IRkcToolCommonOp::GetControlText( m_pm, _T("LabelTip") ).c_str() , _T("设备升级成功，即将进入重启，请勿断电！") ) != 0 &&
+        wcscmp( IRkcToolCommonOp::GetControlText( m_pm, _T("LabelTip") ).c_str() , _T("账号已在其他地方登录") ) != 0)
+    {
+        //关闭弹窗
+        WINDOW_MGR_PTR->ShowWindow(g_stcStrBackGroundDlg.c_str(), false);  
+        WINDOW_MGR_PTR->CloseWindow(g_stcStrMessageBoxDlg.c_str(),IDCANCEL);  
     }
     return true;
 }

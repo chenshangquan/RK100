@@ -12,6 +12,9 @@ template<> CSearchEquipmentLogic* Singleton<CSearchEquipmentLogic>::ms_pSingleto
 static UINT     g_nTimeOutTimerID;              //timer 的id，用于检测五分钟不操作自动退出
 #define         TIME_TIMEROUT     300000        //定时器时间间隔
 
+static UINT     g_nGrabTimerID;              //timer 的id，用于检测五分钟不操作自动退出
+#define         TIME_GRAB     150        //定时器时间间隔
+
 VOID  CALLBACK  CTimerOutFun(  HWND   hwnd,   UINT   uMsg, UINT_PTR  idEvent, DWORD   dwTime  )
 {
     if ( idEvent == g_nTimeOutTimerID )
@@ -22,6 +25,13 @@ VOID  CALLBACK  CTimerOutFun(  HWND   hwnd,   UINT   uMsg, UINT_PTR  idEvent, DW
         CRkcComInterface->CloseSocket();
         WINDOW_MGR_PTR->ShowWindow(g_stcStrToolFrameDlg.c_str(),false);
         CSearchEquipmentLogic::GetSingletonPtr()->GetPaintManagerUI()->DoCase(_T("caseIsnotLogin"));
+    }
+    else if ( idEvent == g_nGrabTimerID )
+    {
+        KillTimer( NULL, g_nGrabTimerID );
+        g_nGrabTimerID = 0;
+
+        ShowMessageBox(_T("账号已在其他地方登录"),1);
     }
 }
 
@@ -55,6 +65,7 @@ const String CSearchEquipmentLogic::strEquipmentListItem = _T("EquipmentListItem
 CSearchEquipmentLogic::CSearchEquipmentLogic()
 {
     g_nTimeOutTimerID = 0;
+    g_nGrabTimerID = 0;
 }
 
 CSearchEquipmentLogic::~CSearchEquipmentLogic()
@@ -389,15 +400,12 @@ bool CSearchEquipmentLogic::OnRkcDisconnected( WPARAM wparam, LPARAM lparam, boo
     m_pm->DoCase(_T("caseIsnotLogin"));
     SetTimerOutTimer(false);
 
-    //关闭弹窗
-    WINDOW_MGR_PTR->ShowWindow(g_stcStrBackGroundDlg.c_str(), false);  
-    WINDOW_MGR_PTR->CloseWindow(g_stcStrMessageBoxDlg.c_str(),IDCANCEL);  
     //关闭弹窗浏览
     UIDATAMGR->CloseFileDlg();
 
     if (wparam == 1)
     {
-        ShowMessageBox(_T("账号已在其他地方登录"),1);
+        g_nGrabTimerID = SetTimer( NULL, 0, TIME_GRAB, CTimerOutFun );
     }
     return true;
 }

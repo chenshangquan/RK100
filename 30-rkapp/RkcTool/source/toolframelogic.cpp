@@ -32,6 +32,7 @@ APP_BEGIN_MSG_MAP(CToolFrameLogic, CNotifyUIImpl)
     MSG_SELECTCHANGE(_T("DebugModeOpt"), OnTabDebugModel)
 
     USER_MSG(UI_RKC_POWER_FLESH , OnRkcPowerReflesh)
+    USER_MSG(UI_RKC_CONNECTED , OnRkcConnected)
     USER_MSG(UI_RKC_DISCONNECTED , OnRkcDisconnected)
 
 APP_END_MSG_MAP()
@@ -486,7 +487,10 @@ u8 CToolFrameLogic::ExitCheckChange()
                     int nBoxRe = ShowMessageBox(_T("是否保存当前修改内容"),2);
                     if (nBoxRe == IDOK)
                     {
-                        CNetworkSetupLogic::GetSingletonPtr()->OnSaveNetWorkButClicked();
+                        return CNetworkSetupLogic::GetSingletonPtr()->OnSaveNetWorkButClicked() ? 3 : 1;
+                    }
+                    else if (nBoxRe == IDNO)
+                    {
                         return 1;
                     }
                     else
@@ -503,7 +507,10 @@ u8 CToolFrameLogic::ExitCheckChange()
                     int nBoxRe = ShowMessageBox(_T("是否保存当前修改内容"),2);
                     if (nBoxRe == IDOK)
                     {
-                        CRadioSetupLogic::GetSingletonPtr()->OnSaveRadioButClicked();
+                        return CRadioSetupLogic::GetSingletonPtr()->OnSaveRadioButClicked() ? 3 : 1;
+                    }
+                    else if (nBoxRe == IDNO)
+                    {
                         return 1;
                     }
                     else
@@ -520,7 +527,10 @@ u8 CToolFrameLogic::ExitCheckChange()
                     int nBoxRe = ShowMessageBox(_T("是否保存当前修改内容"),2);
                     if (nBoxRe == IDOK)
                     {
-                        CWorkingModeLogic::GetSingletonPtr()->OnSaveWorkModeButClicked();
+                        return CWorkingModeLogic::GetSingletonPtr()->OnSaveWorkModeButClicked() ? 3 : 1;
+                    }
+                    else if (nBoxRe == IDNO)
+                    {
                         return 1;
                     }
                     else
@@ -537,7 +547,10 @@ u8 CToolFrameLogic::ExitCheckChange()
                     int nBoxRe = ShowMessageBox(_T("是否保存当前修改内容"),2);
                     if (nBoxRe == IDOK)
                     {
-                        CDebugModeLogic::GetSingletonPtr()->OnSaveDebugModeButClicked();
+                        CDebugModeLogic::GetSingletonPtr()->OnSaveDebugModeButClicked() ? 3 : 1;
+                    }
+                    else if (nBoxRe == IDNO)
+                    {
                         return 1;
                     }
                     else
@@ -555,32 +568,72 @@ u8 CToolFrameLogic::ExitCheckChange()
     return 3;
 }
 
+void CToolFrameLogic::CheckTabReback(CControlUI* pSender)
+{
+    CTabLayoutUI *pControl = (CTabLayoutUI*)IRkcToolCommonOp::FindControl( m_pm, _T("ToolFrameSlideTab") );
+    if (pControl)
+    {
+        if (pSender)
+        {
+            COptionUI* pMsgSpender = (COptionUI*)pSender;
+            pMsgSpender->SetCheckNoMsg(false);
+        }
+        switch(pControl->GetCurSel())
+        {
+        case emTabID_NetworkSetup:
+            IRkcToolCommonOp::OptionSelectNoMsg(true,m_pm,_T("NetworkSetupOpt"));
+            break;
+        case emTabID_RadioSetup:
+            IRkcToolCommonOp::OptionSelectNoMsg(true,m_pm,_T("RadioSetupOpt"));
+            break;
+        case emTabID_WorkingMode:
+            IRkcToolCommonOp::OptionSelectNoMsg(true,m_pm,_T("WorkingModeOpt"));
+            break;
+        case emTabID_BackupUpgrade:
+            IRkcToolCommonOp::OptionSelectNoMsg(true,m_pm,_T("BackupUpgradeOpt"));
+            break;
+        case emTabID_DebugMode:
+            IRkcToolCommonOp::OptionSelectNoMsg(true,m_pm,_T("DebugModeOpt"));
+            break;
+        default:
+            break;
+        }
+    }
+}
+
 bool CToolFrameLogic::OnTabModifyPassword()
 {
     CTabLayoutUI *pControl = (CTabLayoutUI*)IRkcToolCommonOp::FindControl( m_pm, _T("ToolFrameSlideTab") );
     if (pControl)
     {
-        int nCurSel = pControl->GetCurSel();
-        CVerticalLayoutUI* pVer = (CVerticalLayoutUI*)pControl->GetItemAt(nCurSel);
-        if (pVer)
+        if (IsConfigChange())
         {
-            if (nCurSel == emTabID_ModifyPassword)
+            int nCurSel = pControl->GetCurSel();
+            CVerticalLayoutUI* pVer = (CVerticalLayoutUI*)pControl->GetItemAt(nCurSel);
+            if (pVer)
             {
-                if (CModifyPasswordLogic::GetSingletonPtr()->IsConfigChange())
+                if (nCurSel == emTabID_ModifyPassword)
+                {
+                    if (CModifyPasswordLogic::GetSingletonPtr()->IsConfigChange())
+                    {
+                        CModifyPasswordLogic::GetSingletonPtr()->OnResetAllInput();
+                        pControl->SelectItem(NULL);     //重新选择修改密码界面
+                        pControl->SelectItem(emTabID_ModifyPassword);
+                    }
+                }
+                else
                 {
                     CModifyPasswordLogic::GetSingletonPtr()->OnResetAllInput();
-                    pControl->SelectItem(NULL);     //重新选择修改密码界面
                     pControl->SelectItem(emTabID_ModifyPassword);
                 }
-            }
-            else
-            {
-                CModifyPasswordLogic::GetSingletonPtr()->OnResetAllInput();
-                pControl->SelectItem(emTabID_ModifyPassword);
-            }
 
-            m_pm->DoCase(_T("caseMenuItemSel"));
-        }    
+                m_pm->DoCase(_T("caseMenuItemSel"));
+            }    
+        }
+        else
+        {
+            CheckTabReback();
+        }
     }
 
     return true;
@@ -591,23 +644,30 @@ bool CToolFrameLogic::OnTabAboutInfo()
     CTabLayoutUI *pControl = (CTabLayoutUI*)IRkcToolCommonOp::FindControl( m_pm, _T("ToolFrameSlideTab") );
     if (pControl)
     {
-        int nCurSel = pControl->GetCurSel();
-        CVerticalLayoutUI* pVer = (CVerticalLayoutUI*)pControl->GetItemAt(nCurSel);
-        if (pVer)
+        if (IsConfigChange())
         {
-            if (nCurSel == emTabID_ModifyPassword)
+            int nCurSel = pControl->GetCurSel();
+            CVerticalLayoutUI* pVer = (CVerticalLayoutUI*)pControl->GetItemAt(nCurSel);
+            if (pVer)
             {
-                if (CModifyPasswordLogic::GetSingletonPtr()->IsConfigChange())
+                if (nCurSel == emTabID_ModifyPassword)
                 {
-                    pControl->SelectItem(emTabID_AboutInfo);
+                    if (CModifyPasswordLogic::GetSingletonPtr()->IsConfigChange())
+                    {
+                        pControl->SelectItem(emTabID_AboutInfo);
+                    }
                 }
-            }
-            else
-            {
-                pControl->SelectItem(emTabID_AboutInfo);                
-            }
+                else
+                {
+                    pControl->SelectItem(emTabID_AboutInfo);                
+                }
 
-            m_pm->DoCase(_T("caseMenuItemSel"));
+                m_pm->DoCase(_T("caseMenuItemSel"));
+            }
+        }
+        else
+        {
+            CheckTabReback();
         }
     }
     
@@ -628,6 +688,23 @@ bool CToolFrameLogic::OnRkcPowerReflesh( WPARAM wparam, LPARAM lparam, bool& bHa
     sprintf(achBottom, BOTTOM_STRING, inet_ntoa(*(in_addr*)&dwIP), tLoginDevitem.tDevID.achDevType, tLoginDevitem.tDevEx.achDevSoftVersion, ((float)tRK100PowerInfo.dwCurrent)/1000, ((float)tRK100PowerInfo.dwPower)/1000);
     IRkcToolCommonOp::SetControlText( CA2T(achBottom) , m_pm ,_T("BottomLeb"));
 
+    return true;
+}
+
+bool CToolFrameLogic::OnRkcConnected( WPARAM wparam, LPARAM lparam, bool& bHandle )
+{
+    bool bIsLogin = (bool)wparam;
+    EMRK100OptRtn emErr = (EMRK100OptRtn)lparam;
+    if (bIsLogin)
+    {
+        //选中网络设置
+        IRkcToolCommonOp::OptionSelect(true,m_pm,_T("NetworkSetupOpt"));
+        CTabLayoutUI *pControl = (CTabLayoutUI*)IRkcToolCommonOp::FindControl( m_pm, _T("ToolFrameSlideTab") );
+        if (pControl)
+        {
+            pControl->SelectItem(emTabID_NetworkSetup);
+        }
+    }
     return true;
 }
 

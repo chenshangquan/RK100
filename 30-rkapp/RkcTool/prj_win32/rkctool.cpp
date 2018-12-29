@@ -120,7 +120,7 @@ BOOL CRkcToolApp::InitInstance()
 
     new CSystem(_T("system.xml"));
 
-    //创建cns session
+    //创建rkctool session
     CRkcComInterface->CreateSession();
 
     CSystem::GetSingletonPtr()->Launch();
