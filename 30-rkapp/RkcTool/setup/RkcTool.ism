@@ -1194,7 +1194,7 @@ UwBJAE4ARwBMAEUAXwBFAFgARQBfAEkATQBBAEcARQABAE0AZQBkAGkAYQA=
 		<row><td>SchemaVersion</td><td>765</td></row>
 		<row><td>Script</td><td>1</td></row>
 		<row><td>SetupArguments</td><td/></row>
-		<row><td>TARGETDIR</td><td>D:\Program Files\Kedacom\RkcTool\</td></row>
+		<row><td>TARGETDIR</td><td>C:\Program Files\Kedacom\RkcTool\</td></row>
 		<row><td>Type</td><td>PRO</td></row>
 	</table>
 

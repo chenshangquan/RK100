@@ -134,7 +134,7 @@ u8 CModifyPasswordLogic::ExitCheckChange()
     if (strCurPwd == _T("") && strNewPwd == _T("") && strCfmPwd == _T(""))
     {
         OnResetAllInput();
-        return 2;
+        return 3;
     }
     else
     {
